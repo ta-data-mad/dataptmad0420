@@ -4,42 +4,45 @@
 
 ## Getting Started
 
-1. Install [grip](https://github.com/joeyespo/grip) with `brew install grip` (Mac) or `pip install grip` (Windows).
-
-2. Start local Markdown server:
+1. Install **git** following the instructions included [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). If you're using Ubuntu you can just:
 
 ```
-$ grip -b README.md 8080 --user <your-github-username> --pass <your-github-password>
+$ sudo apt install git-all
 ```
 
-:bulb: `grip` uses the GitHub Markdown API to render the files in localhost so that you'll see exactly how GitHub would render the Markdown files. Running `grip` with your Github username and password will allow you to make unrestricted requests to GitHub. If you see error when you run the problem that says `GitHub Rate Limit Reached`, it's because you didn't run grip with your GitHub credentials or the provided credentials are incorrect.
-
-## Working on the Assignments
-
-**To work on your first assignment**, create a branch of your own with your name (change the branch name unless your name is John Doe):
+1. Fork this repository to your GitHub account and clone the forked repository into your local Hard Drive:
 
 ```
-$ git checkout -b john-doe
+$ git clone https://github.com/<your-account>/<lab-repo>.git
+```
+Git will create a new folder named as the repository you're cloning and will convert it automatically into a git repository.
+
+2. Once you're into your newly created folder (repository) you can create a new branch for start an assignment:
+
+```
+$ git checkout -b <lab-name>
 ```
 
-Each project/lab has its own directory in which you'll find a `README.md` file and a sub-directory named `your-code`. The descriptions and requirements of the assignment can be found in the README file. When you work on the assignment, create your code files in the `your-code` directory and save regularly while you work.
-
-After you finish, add those files to git, commit, and push your branch to GitHub. In the commit message, specify which lab/project you are submitting. For example:
+Each project/lab has its own directory in which you'll find a `README.md` file and, in most of them, a sub-directory named `your-code`. The descriptions and requirements of the assignment can be found in the README file. When you work on the assignment, create your code files in the `your-code` directory and save regularly while you work using:
 
 ```
 $ git add <files-to-add>
-$ git commit -m "Module 1 MySQL project"
-$ git push origin john-doe
+$ git commit -m "lab-start"
+$ git push origin <branch-name>
+```
+
+After you finish, perform a last commit as follow:
+
+```
+$ git add <files-to-add>
+$ git commit -m "lab-finished"
+$ git push origin <branch-name>
 ```
 
 The instructional team will review your branch and provide feedback.
 
-**To work on the subsequent assignments**, keep using the same branch you created and push your new codes to GitHub.
+**To work on the subsequent assignments**, create a new branch for every new assignment.
 
-:exclamation: Update your branch regularly because the curriculum development team is developing new assignments for you as the course proceeds. Make sure you have committed all your codes then exectue `git pull origin master` to obtain the latest code from the `master` branch.
+:exclamation: You may be asked in the future to update your forked repo because the curriculum development team is developing new assignments for you as the course proceeds. 
 
 ### Happy coding!
-
-Hola que tal
-
-Muy bien
