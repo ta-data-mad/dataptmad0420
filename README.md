@@ -27,7 +27,7 @@ Each project/lab has its own directory in which you'll find a `README.md` file a
 
 ```
 $ git add <files-to-add>
-$ git commit -m "lab-start"
+$ git commit -m "lab-started"
 $ git push origin <branch-name>
 ```
 

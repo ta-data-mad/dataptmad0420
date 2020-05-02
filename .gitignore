@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# iOS
+.DS_Store
+
+# Miscellaneous
+.idea
