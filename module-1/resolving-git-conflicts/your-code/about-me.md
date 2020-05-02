@@ -14,3 +14,4 @@ Look for a job in the sector
 Specially I will seek in specialiced Data industries to improve my knowledge
 I think that Data analyst will be a good role, but i'm still not sure about it because of my weak experience in the Data field
 Achieve a good job as data analyst, improve my knowledge with experienced colleagues and come back in the future to the architecture field to apply this knowledge.
+
