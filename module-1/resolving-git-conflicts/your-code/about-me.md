@@ -6,7 +6,7 @@
 
 * Do you have previous experience with technology/data?: No mucha. Para ser mas preciso conozco algunos metodos de computacion cientifica,pero no mas.
 
-# Why am I here: Tengo planes de boda. 
+# Why am I here? 
 
 * What has brought you to Ironhack?: Una nesecidad de mejoramiento profesional.
 
@@ -16,6 +16,6 @@
 
 * Which industry will you seek employment in?: No me cierro a opciones dependera de la demanda.Pero Preferiblemente el sector tecnologico.Creo que es donde mejor encaja mi perfil.
 
-* What will your future role look like?:
+* What will your future role look like?
 
 * What is your career goal?: Sentirme a gusto en mi profesion y tener buenos ingresos.
