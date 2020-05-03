@@ -1,2 +1,1 @@
-This is Sergio Figueroa, Data pt Ironhacker. 
-Adding something to the file and saving
+My name is Sergio Figueroa and this is the second shortest profile in history. 
