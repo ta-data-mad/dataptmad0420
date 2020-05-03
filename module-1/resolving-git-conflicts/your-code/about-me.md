@@ -9,7 +9,7 @@
     * What has brought you to Ironhack? My curiosity to learn
     * What knowledge/skills do you expect to learn in this bootcamp? How to properly manage data
 
-    # What will I do after the bootcamp? Propably, continue doing what I was doing but with a different approach and other tools
+    # What will I do after the bootcamp? Propably, I will continue doing what I am doing today but with a different approach and other tools
 
     * Which industry will you seek employment in? FMCG & Retail
     * What will your future role look like? I would love to become a Brand Manager
