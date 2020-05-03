@@ -1,3 +1,4 @@
+
 # Who am I
 
 * Where are you from? Palencia
@@ -14,5 +15,3 @@
 * Which industry will you seek employment in? I'm not seeking for a new employ, yet
 * What will your future role look like? Calm, secure & conciliating.
 * What is your career goal? To be happy.
-
-¿?
