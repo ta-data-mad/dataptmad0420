@@ -1,3 +1,4 @@
+
 # Who am I
 * Where are you from? Madrid
 * What do you do? I work as an Innovation and Content Manager at Mindshare* Do you have previous experience with technology/data? NO
@@ -10,3 +11,4 @@
 * Which industry will you seek employment in? I would love to achieve enough knowledge to bring innovation in the area of health and wellness. I also think I may have some good ideas in the field of home applications
 * What will your future role look like? I think I'm looking at a double way. On the one hand, leading a Data team in a technological company and on the other hand I am experimenting on my own, trying to create "independent" products. 
 * What is your career goal? My goal is to make functionalities that really help to facilitate tasks or decisions
+
