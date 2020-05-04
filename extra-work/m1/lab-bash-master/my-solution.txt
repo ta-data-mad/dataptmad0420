@@ -7,3 +7,9 @@ cat sed.txt
 cat at.txt lorem.txt 
 head -n3 sed.txt
 tail -n3 sed.txt 
+nano sed.txt  (añadido desde el editor nano, guardar y cerrar)
+tail -n3 sed.txt 
+sed -i 's/et/ET/g' at.txt 
+w
+pwd
+
