@@ -1,0 +1,36 @@
+1.  Print Hello World in console
+	echo "Hello World"
+	
+ 2. Create a new folder named new_dir
+ 	mkdir new_dir
+ 	
+ 3. Delete a new_dir folder
+ 	rm -r new_dir
+ 	
+ 4. Make a copy of sed.txt (located in the lorem folder) to lorem-copy
+ 	cp lorem/sed.txt lorem-copy
+ 	
+ 5. Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+ 	cp lorem/*txt lorem-copy
+ 	
+ 6. Locate at lorem folder and show sed.txt content
+ 	xdg-open lorem/sed.txt o cat lorem/sed.txt
+ 	
+ 7. Locate at lorem folder and show at.txt and lorem.txt content
+ 	cd lorem -- 
+ 	
+ 	
+    • Locate at lorem-copy folder and show the first three lines of sed.txt.
+    • Locate at lorem-copy folder and show the last three lines of sed.txt.
+    • Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+    • Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+    • Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+    • Find the active user of the system.
+    • Find out where are you located within the system.
+    • List all .txt files located at lorem.
+    • Count the number of lines in sed.txt located at lorem.
+    • Count the number of files which name starts with lorem located at the whole lab directory.
+    • Count the number of times et appears in at.txt located at lorem.
+    • Count the number of times the string et appears in at.txt located at lorem.
+    • Count the number of times the string et appears in every file located at lorem-copy.
+
