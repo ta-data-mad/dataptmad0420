@@ -25,4 +25,3 @@
 - Data Scientist, Data Analyst or Machine Learning Engineer.
 * What is your career goal?
 - Improve and try to innovate, and then managing and working on my own proyects with great professionals.
-
