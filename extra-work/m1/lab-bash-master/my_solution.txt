@@ -22,11 +22,11 @@
  8. Locate at lorem-copy folder and show the first three lines of sed.txt
  	head -n3 lorem-copy/sed.txt
  	
- 9. Locate at lorem-copy folder and show the last three lines of sed.txt.
+ 9. Locate at lorem-copy folder and show the last three lines of sed.txt
  	tail -n lorem-copy/sed.txt
  	
- 10. 
- 	
+ 10. Add Homo homini lupus. at the end of sed.txt located at lorem-copy
+ 	echo " Homo homini lupus" >> lorem-copy/sed.txt
  
     • Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
     • Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
