@@ -1,0 +1,9 @@
+echo "Hello World"
+mkdir new_dir
+rm -r new_dir
+cp sed.txt ~/Documentos/ironhack_repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+cp at.txt lorem.txt ~/Documentos/ironhack_repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+cat sed.txt
+cat at.txt lorem.txt 
+head -n3 sed.txt
+tail -n3 sed.txt 
