@@ -18,7 +18,7 @@
 
 # What knowledge/skills do you expect to learn in this bootcamp?
 
->1. stadistics, for sure (not really a math person myself)
+>1. stadistics
 >2. how to make projects from scratch (how people work etc, how to manage a new project, etc)
 >3. Lots of programming! I already have a basic level, but i need more. Also, the hability to learn new lenguages and how to face being clueless at new technologies.
 >4. Machine Learning, IA and its possibilities 
