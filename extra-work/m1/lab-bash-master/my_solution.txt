@@ -17,11 +17,17 @@
  	xdg-open lorem/sed.txt o cat lorem/sed.txt
  	
  7. Locate at lorem folder and show at.txt and lorem.txt content
- 	cd lorem -- 
+ 	cat lorem/at.txt lorem/lorem.txt
  	
+ 8. Locate at lorem-copy folder and show the first three lines of sed.txt
+ 	head -n3 lorem-copy/sed.txt
  	
-    • Locate at lorem-copy folder and show the first three lines of sed.txt.
-    • Locate at lorem-copy folder and show the last three lines of sed.txt.
+ 9. Locate at lorem-copy folder and show the last three lines of sed.txt.
+ 	tail -n lorem-copy/sed.txt
+ 	
+ 10. 
+ 	
+ 
     • Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
     • Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
     • Change every et to ET in at.txt located at lorem-copy (tip: use sed).
