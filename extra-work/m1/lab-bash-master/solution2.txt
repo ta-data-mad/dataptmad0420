@@ -1,0 +1,96 @@
+#Print Hello World in console.
+printf "%s\n" "Hello World"
+#Create a new folder named new_dir.
+mkdir new_dir
+#Delete new_dir folder.
+rm -rf new_dir
+#Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+cp sed.txt ~/ir/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+#Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+cp {at.txt,lorem.txt} ~/ir/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+#Locate at lorem folder and show sed.txt content.
+cat sed.txt
+#Locate at lorem folder and show at.txt and lorem.txt content.
+cat at.txt lorem.txt
+#Locate at lorem-copy folder and show the first three lines of sed.txt.
+sed -n -e 1,3p sed.txt
+#Locate at lorem-copy folder and show the last three lines of sed.txt.
+tail -n 3 sed.txt
+#Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+echo " Homo homini lupus." >> sed.txt
+#Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+tail -n 3 sed.txt
+#Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+sed -i -e 's/et/ET/g' at.txt
+#Find the active user of the system.
+who
+#Find out where are you located within the system.
+pwd
+#List all .txt files located at lorem.
+ls -laht *.txt
+#Count the number of lines in sed.txt located at lorem.
+wc -l sed.txt
+#Count the number of files which name starts with lorem located at the whole lab directory.
+find -mindepth 1 -type f -name "lorem*" -printf x| wc -c
+#Count the number of times et appears in at.txt located at lorem.
+grep -o 'et' at.txt |wc -l
+#Count the number of times the string et appears in at.txt located at lorem.
+grep -o -w 'et' at.txt|wc -l
+#Count the number of times the string et appears in every file located at lorem-copy.
+grep -w -r -o 'et' |wc -l
+
+#BONUS
+#Load your name in the variable name.
+name=Carlos_Pinero
+#Print that variable.
+printf "%s\n" $name
+#Create a folder named after the variable name.
+mkdir $name
+#Delete that folder.
+rm -rf $name
+#For every folder in lorem print the total number of characters of every file name. Try using a for loop to show every file name.
+grep  -r -o '.' | wc -l
+#Print every file.
+cat *
+#Print the number of characters of every file name.
+Number of characters of each file.
+grep  -r -o '.' sed.txt | wc -l
+grep  -r -o '.' lorem.txt | wc -l
+grep  -r -o '.' at.txt | wc -l
+Number of characters of every file.
+grep  -r -o '.' | wc -l
+Number of characters of every file name.
+ls | grep -o '.'| wc -l
+Number of characters of each file name
+for f in *;do echo ''$f''|wc -c; done
+#Print the number of characters of every file name with the following format: lorem has 5 characters lenght
+
+
+
+
+#Show the system processes being executels (show them hierarchically):
+#Using top or htop commands.
+sudo apt-get install htop
+htop
+#Using ps command with arguments.
+ps -e
+ps ax
+#Show processor info on screen.
+lscpu
+#Create 3 new alias and make them available everytime you login your session.
+nano .bashrc
+alias ..='cd ..'
+alias g='git status'
+alias i1='cd  ir/dataptmad0420/module-1'
+alias i2='cd  ir/dataptmad0420/module-2'
+alias i3='cd  ir/dataptmad0420/module-3'
+alias ie='cd  ir/dataptmad0420/extra-work'
+alias ie1='cd  ir/dataptmad0420/extra-work/m1'
+alias ie2='cd  ir/dataptmad0420/extra-work/m2'
+alias ie3='cd  ir/dataptmad0420/extra-work/m3'
+alias la='ls -laht'
+#Compress lorem and lorem-copy folders in a file named lorem-compressed.tar.gz
+tar -cvf lorem-compressed.tar.gz lorem lorem-copy
+#Uncompress lorem-compressed.tar.gz in lorem-uncompressed folder.
+mkdir lorem-uncompressed
+tar -xvf lorem-compressed.tar.gz -C lorem-uncompressed
