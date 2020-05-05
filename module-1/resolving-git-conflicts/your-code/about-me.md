@@ -31,3 +31,4 @@ I would like to reach the knowledge and skills to develop learning models that f
 * Which industry will you seek employment in? I would love to achieve enough knowledge to bring innovation in the area of health and wellness. I also think I may have some good ideas in the field of home applications
 
 * What will your future role look like? I think I'm looking at a double way. On the one hand, leading a Data team in a tecnological company and on the other hand I am experimenting on my own, trying to create "independent" products.
+
