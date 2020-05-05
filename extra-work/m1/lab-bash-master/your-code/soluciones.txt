@@ -46,11 +46,15 @@ List all .txt files located at lorem.
     ls lorem/*.txt
 
 Count the number of lines in sed.txt located at lorem.
+    wc -l lorem/sed.txt 
 
 Count the number of files which name starts with lorem located at the whole lab directory.
+    ls -1q lorem* | wc -l
 
 Count the number of times et appears in at.txt located at lorem.
+    grep -c "et" lorem/at.txt
 
 Count the number of times the string et appears in at.txt located at lorem.
 
 Count the number of times the string et appears in every file located at lorem-copy.
+    grep -c "et" lorem-copy/*.txt
