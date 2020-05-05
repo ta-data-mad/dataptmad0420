@@ -1,0 +1,57 @@
+    1  history										show previous history was deleted
+    2  nano hello.sh									new file with echo Hello World
+    3  bash hello.sh									print file on terminal
+    4  mkdir new_dir									creating new_dir/
+    5  l										show that new_dir was created
+    6  rm -r new_dir									delete directory new_dir/
+    7  l										show files
+    8  cp lorem/sed.txt lorem-copy/sed.txt						copy sed from lorem to lorem-copy
+    9  cd lorem										move to folder lorem/
+   10  l										show files
+   11  cd ..										go back to lab-bash-master/
+   12  cp lorem/at.txt lorem-copy/at.txt; cp lorem/lorem.txt lorem-copy/lorem.txt	copy at; lorem from lorem to lorem-copy
+   13  cd lorem-copy									move to lorem-copy/ 
+   14  l										show lorem-copy/ files
+   15  cd ..										move backwards
+   16  cd lorem										move to lorem/
+   17  l										show lorem/ files
+   18  cat lorem.txt									show lorem.txt
+   19  cat sed.txt									show sed.txt
+   20  cat at.txt; cat lorem.txt							show at.txt and lorem.txt
+   21  history										first copy of comand line
+   22  l										
+   23  head -3 sed.txt									print first 3 lines of sed.txt
+   24  tail -3 sed.txt									print last 3 lines of sed.txt
+   25  echo Homo homini lupus >> sed.txt						add Homo homini lupus at the end of sed.txt (without new line)
+   26  tail -3 sed.txt									verification
+   27  cd ../lorem-copy									move to lorem-copy/
+   28  tail -3 ../lorem/sed.txt								see last 3 lines and verify adding 'Homo ..'
+   29  l										
+   30  sed 's/et/ET/g' at.txt								change every et >> ET t at.txt 
+   31  W										
+   32  w										find active user of the system
+   33  pwd										find where am i located (print absolute path)
+   34  cd ../lorem | ls -ahl *.txt							list all .txt files located at lorem, (all, human readable, long listed)
+   35  cd ../lorem | wc -l sed.txt							count the number of lines in sed.txt at lorem/ (8 sed.txt)
+   36  cd ../ | ls -alhr | wc -l lorem*							count the number of files that start with lorem at the lab directory (3 lorem.txt)
+   37  cd ../lorem | wc -w *et* at.txt							
+   38  cd ../ | wc -w et* at.txt							
+   39  cd ../ | grep 'et' at.txt							
+   40  cd ../ | grep -o -i et at.txt | wc -l						
+   41  cd ../ | tr '[:space:]' '[\n*]' < at.txt | grep -i -c et				
+   42  cd ../lorem | grep 'et' at.txt							show the number of times 'et' appears in lorem/at.txt
+   43  cd ../lorem | grep -o -i 'et' at.txt | wc -l					count the number of times 'et' appears in lorem/at.txt (11 times)
+   44  cd ../lorem | tr '[:space:]' '[\n*]' < at.txt | grep -i -c et			
+   45  cd ../lorem | grep -wc 'et' at.txt						count the number of times the string 'et' appears in lorem/at.txt (6 times)
+   46  cd ../lorem-copy | grep -wc 'et' *						count the number of times the string 'et' appears in every file located at ../lorem-copy (at.txt 6; lorem.txt 1; sed.txt 2)
+   47  l										
+   48  history										second copy to file solution.txt
+   49  tail -3 sed.txt
+   50  tail -3 ../lorem/sed.txt
+   51  tail -3 sed.txt
+   52  echo -e 'Homo homini lupus/n' sed.txt
+   53  tail -3 sed.txt
+   54  man echo										'echo' help
+   55  echo -e '\n Homo homini lupus \n' >> sed.txt					added a new line for before adding 'Homo ..' and added an empty line afterwards since the previous attempt didn't show up in a new line
+   56  tail -3 sed.txt									verification
+   57  history										third copy  to file solution.txt
