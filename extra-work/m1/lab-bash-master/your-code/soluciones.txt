@@ -1,39 +1,49 @@
 
-mkdir new_dir
-mkdir new_dir
-mkdir new_dir
-
-
 
 Print Hello World in console.
+    echo "Hello World"
 
 Create a new folder named new_dir.
+    mkdir new_dir
 
 Delete new_dir folder.
+    rm -r new_dir
 
 Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+    cp lorem/sed.txt  lorem-copy/
 
 Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+    cp -t lorem-copy/ lorem/at.txt lorem/lorem.txt
 
 Locate at lorem folder and show sed.txt content.
+    cat lorem/sed.txt
 
 Locate at lorem folder and show at.txt and lorem.txt content.
+    cat lorem/sed.txt lorem/lorem.txt
 
 Locate at lorem-copy folder and show the first three lines of sed.txt.
+    cat lorem/sed.txt lorem/lorem.txt
 
 Locate at lorem-copy folder and show the last three lines of sed.txt.
+    head -n 3 lorem-copy/sed.txt
 
 Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+    echo "Homo homini lupus" >> lorem-copy/sed.txt
 
 Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+    tail -n 3 lorem-copy/sed.txt 
 
 Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+    sed -i 's/et/ET/g' lorem-copy/at.txt 
 
 Find the active user of the system.
+    whoami
 
 Find out where are you located within the system.
+    pwd
 
 List all .txt files located at lorem.
+    ls lorem/*.txt
 
 Count the number of lines in sed.txt located at lorem.
 
