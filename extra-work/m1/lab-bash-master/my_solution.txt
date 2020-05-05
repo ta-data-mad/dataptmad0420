@@ -50,10 +50,11 @@
  	ls -l lorem* | wc -l
  	
  18. Count the number of times et appears in at.txt located at lorem
- 	
+ 	grep -o et lorem/at.txt | wc -l
  	
  19. Count the number of times the string et appears in at.txt located at lorem
-    	grep -c "et" lorem/at.txt
+    	grep -wo et lotem/at.txt | wc -l
     	
-    • Count the number of times the string et appears in every file located at lorem-copy.
+ 20. Count the number of times the string et appears in every file located at lorem-copy
+ 	grep -rwo et lorem | wc -l
 
