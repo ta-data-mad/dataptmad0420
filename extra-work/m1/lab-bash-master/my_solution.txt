@@ -28,11 +28,17 @@
  10. Add Homo homini lupus. at the end of sed.txt located at lorem-copy
  	echo " Homo homini lupus" >> lorem-copy/sed.txt
  
-    • Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
-    • Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
-    • Change every et to ET in at.txt located at lorem-copy (tip: use sed).
-    • Find the active user of the system.
-    • Find out where are you located within the system.
+ 11. Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+ 	tail -n3 lorem-copy/sed.txt
+ 	
+ 12. Change every et to ET in at.txt located at lorem-copy (tip: use sed)
+ 	sed 's/et/\U&/g' < lorem-copy/at.txt
+ 	
+ 13. Find the active user of the system
+ 	w
+ 	
+ 14. Find out where are you located within the system.
+ 	pwd
     • List all .txt files located at lorem.
     • Count the number of lines in sed.txt located at lorem.
     • Count the number of files which name starts with lorem located at the whole lab directory.
