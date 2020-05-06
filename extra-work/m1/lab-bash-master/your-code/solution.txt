@@ -1,4 +1,4 @@
-# Step 1: Print Hello World in console with "source <file-name>" or creaiting a script "filename.sh" and execute with "bash <file-name> and save in that file the next sentence:
+# Step 1: Print Hello World in console with "source <file-name>" or creating a script "filename.sh" and execute with "bash <file-name> and save in that file the next sentence:
 
 echo "Hello World"
 
@@ -80,20 +80,25 @@ pwd
 ls -l  ~/Ironhack/IronLabs/dataptmad0420/extra-work/m1/lab-bash-master/lorem/*.txt
 
 
-# Step 16: Count the number of files which name starts with lorem located at the whole lab directory.
+# Step 16: Count the number of lines in sed.txt located at lorem.
+cd ~/Ironhack/IronLabs/dataptmad0420/extra-work/m1/lab-bash-master/lorem
+wc -l sed.txt
+
+
+# Step 17: Count the number of files which name starts with lorem located at the whole lab directory.
 find ~/Ironhack/IronLabs/dataptmad0420 -name 'lorem*' | wc -l
 
 
-# Step 17: Count the number of times et appears in at.txt located at lorem.
-more at.txt |grep -i 'et'
+# Step 18: Count the number of times et appears in at.txt located at lorem.
+grep -oi 'et' at.txt | wc -l
 
 
-# Step 18: Count the number of times the string et appears in at.txt located at lorem.
-more at.txt |grep -i 'et' | wc -l
+# Step 19: Count the number of times the string et appears in at.txt located at lorem.
+grep -oiw 'et' at.txt | wc -l
 
 
-# Step 19: Count the number of times the string et appears in every file located at lorem-copy.
-ls |grep -r -i 'et' ~/Ironhack/IronLabs/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/
+# Step 20: Count the number of times the string et appears in every file located at lorem-copy.
+grep -rwo 'et' ~/Ironhack/IronLabs/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/ | wc -l
 
 
-
+BONUS:
