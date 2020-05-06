@@ -1,0 +1,9 @@
+
+mkdir "name"-> crear carpeta
+rmdir "name" -> elimnar carpeta
+cp "ruta_archivo_original" "ruta_archivo_destino" -> copiar 1 archivo en la carpeta que indiques
+
+cat "archivo" -> muestra el contenido del archivo
+head -n "archivo" -> muestra las n primeras filas del archivo
+tail -n "archivo" -> muestra las n ultimas filas del archivo
+.
