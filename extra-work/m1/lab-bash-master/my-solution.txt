@@ -14,4 +14,11 @@ w
 pwd
 ls -la *.txt
 wc -l sed.txt 
+ls -1R lorem* | grep -c lorem
+cat at.txt | grep -c et
+cat at.txt | grep -c et
+cat * | grep -c et
+
+BASH FILES
+
 
