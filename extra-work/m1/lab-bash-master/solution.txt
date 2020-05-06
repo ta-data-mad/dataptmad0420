@@ -1,9 +1,16 @@
+echo  XXXX -> print XXXX in console 
+mkdir "name"-> Create a new folder named "name"
+rmdir "name" -> Delete "name" folder
+cp "original_file_path" "final_file_path" -> Make a copy the original file to other folder 
+cp "file_1" "file_2" "final_file_path" -> Make a copy the originals files to other folder 
+cat "file" -> show "file" content
+cat "file_1" "file_2" ->show "file_1" and "file_2" content
+head -n "number" "file" -> show the first "number" lines of "file"
+tail -n "number" "file" -> show the last "number" lines of "file"
+echo "text" >> "file" -> Add "text" at the end of "file"
+sed -i 's/XX/YY/g' "file" -> Change every XX to YY in "file". With -i the change is permanent / s is for change / g is for all XX in the text
+who -> Find the active user of the system
+pwd -> Find out where are you located within the system
+ls *".xxx" -> List all ".xxx" files (with this extension) located in the folder
+cat "file"|wc -l -> Count the number of lines in "file"
 
-mkdir "name"-> crear carpeta
-rmdir "name" -> elimnar carpeta
-cp "ruta_archivo_original" "ruta_archivo_destino" -> copiar 1 archivo en la carpeta que indiques
-
-cat "archivo" -> muestra el contenido del archivo
-head -n "archivo" -> muestra las n primeras filas del archivo
-tail -n "archivo" -> muestra las n ultimas filas del archivo
-.
