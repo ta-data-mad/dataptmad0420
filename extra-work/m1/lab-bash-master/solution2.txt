@@ -1,5 +1,6 @@
 #Print Hello World in console.
 printf "%s\n" "Hello World"
+echo 'Hello World'
 #Create a new folder named new_dir.
 mkdir new_dir
 #Delete new_dir folder.
@@ -8,6 +9,7 @@ rm -rf new_dir
 cp sed.txt ~/ir/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
 #Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
 cp {at.txt,lorem.txt} ~/ir/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+cp at.txt lorem.txt ~/ir/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
 #Locate at lorem folder and show sed.txt content.
 cat sed.txt
 #Locate at lorem folder and show at.txt and lorem.txt content.
@@ -62,12 +64,9 @@ grep  -r -o '.' | wc -l
 Number of characters of every file name.
 ls | grep -o '.'| wc -l
 Number of characters of each file name
-for f in *;do echo ''$f''|wc -c; done
+for x in *;do file=$(echo ''$x''); file=''${file%.*}''; echo ''${file}|grep -o '.'|wc -l ;done
 #Print the number of characters of every file name with the following format: lorem has 5 characters lenght
-
-
-
-
+for x in *;do file=$(echo ''$x''); file=''${file%.*}''; a=$(echo ''${file}|grep -o '.'|wc -l); echo ''${file} has ${a} characters lenght''; done
 #Show the system processes being executels (show them hierarchically):
 #Using top or htop commands.
 sudo apt-get install htop
