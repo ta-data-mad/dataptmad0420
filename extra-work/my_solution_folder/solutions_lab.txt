@@ -22,6 +22,19 @@ grep -o 'et' at.txt | wc -l = it shows 10 times the word et appears
 grep -o 'et' *.txt | wc -l = it gives us the number of times et appears on that directory 
 
 
+BONUS
+
+for item in lorem:
+	print(item)
+
+for values in lorem:
+	print(len(values))
+
+for values in lorem:
+	print('lorem has',(len(values)),'characters length.
+
+
+
 
 
 
