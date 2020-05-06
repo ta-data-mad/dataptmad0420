@@ -1,1 +1,30 @@
 Solution lab-bash-master
+
+$ cd datamadpt0420/extra-work/m1/lab-bash-master
+$ git checkout -b lab-bash-master
+$ nano Solution2.txt
+$ ls
+$ echo Hello World
+$ mkdir new-dir
+$ rm -r new-dir
+$ cp lorem/sed.txt lorem-copy/
+$ cp lorem/at.txt lorem/lorem.txt lorem-copy
+$ cd lorem
+$ cat sed.txt
+$ cat at.txt
+$ cat lorem.txt
+$ cd ../.
+$ cd lorem-copy
+$ head -n 3 sed.txt
+$ tail -n 3 sed.txt
+$ nano sed.txt
+$ Homo homini lupus.
+$ tail -n 3 sed.txt
+$ sed -i 's/et/ET/g' at.txt
+$
+$ pwd
+$ cd ./..
+$ cd lorem
+$ ls *txt
+$ wc -l | sed.txt 
+
