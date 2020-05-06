@@ -12,4 +12,6 @@ tail -n3 sed.txt
 sed -i 's/et/ET/g' at.txt 
 w
 pwd
+ls -la *.txt
+wc -l sed.txt 
 
