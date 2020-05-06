@@ -1,0 +1,27 @@
+echo Hello World = to print our message on terminal
+
+mkdir new_dir= creates the directory
+rm -r new_dir= removes the new folder
+cp sed.txt lorem-copy=copy text to another folder
+cp -r .txt* lorem lorem-copy
+cat sed.txt = show content
+cat * = shows you all the content in this folder
+cat sed.txt lorem.txt = shows us just those two files
+cp -r lorem lorem-copy= copies lorem folder to lorem copy
+head -n 3 sed.txt= shows us the 3 first lines of text
+tail -n 3 sed.txt= shows us last 3 lines
+echo Homo homini lupus. >> sed.txt = adding text at the end of the file
+tail -n 3 sed.txt= to see Homo homini printed at the end
+sed 's/et/ET/' at.txt= edits the text
+w = to find the active user
+pwd = to show me where I'm located
+ls *.txt = to list the files inside lorem
+wc -l sed.txt = to count the number of lines insede the file
+wc -l lorem*= it shows us al the directories with lorem in them
+grep -o 'et' at.txt | wc -l = it shows 10 times the word et appears
+grep -o 'et' *.txt | wc -l = it gives us the number of times et appears on that directory 
+
+
+
+
+
