@@ -58,3 +58,4 @@
  20. Count the number of times the string et appears in every file located at lorem-copy
  	grep -rwo et lorem | wc -l
 
+lab-finished
