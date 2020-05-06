@@ -64,12 +64,16 @@ Count the number of times the string et appears in every file located at lorem-c
 
 
 Load your name in the variable name.
+    name="LucasMadiedo"
 
 Print that variable.
+    echo $name
 
 Create a folder named after the variable name.
+    mkdir $name
 
 Delete that folder.
+    rm -r $name
 
 For every folder in lorem print the total number of characters of every file name. Try using a for loop to show every file name.
     Print every file.
@@ -79,6 +83,7 @@ For every folder in lorem print the total number of characters of every file nam
 Show the system processes being executed (show them hierarchically):
     Using top or htop commands.
     Using ps command with arguments.
+        pstree
 
 Show processor info on screen.
 
