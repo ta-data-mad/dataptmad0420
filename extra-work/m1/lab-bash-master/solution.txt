@@ -1,0 +1,63 @@
+#Ejercicio JUAN MUNOZ
+#Print Hello World in console.
+Answer: echo Hello World
+
+#Create a new folder named new_dir.
+Answer: mkdir new_dir
+
+#Delete new_dir folder.
+Answer: rm -rf new_dir
+
+#Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+Answer 1: get into the lorem folder cd /lorem
+Answer 2: cp sed.txt ~/Documentos/Ironhack/Labs/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
+#Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+Answer: cp at.txt lorem.txt ~/Documentos/Ironhack/Labs/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
+#Locate at lorem folder and show sed.txt content.
+Answer: cat sed.txt
+
+#Locate at lorem folder and show at.txt and lorem.txt content.
+Answer: cat at.txt lorem.txt
+
+#Locate at lorem-copy folder and show the first three lines of sed.txt.
+Answer: head -3 sed.txt 
+
+#Locate at lorem-copy folder and show the last three lines of sed.txt.
+Answer: tail -3 sed.txt  
+
+#Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+Answer 1: Get into lorem-copy cd lorem-copy
+Answer 2: echo sed.txt
+
+#Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+Answer: tail -3 sed.txt
+
+#Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+Answer: sed -i 's/et/ET/g' at.txt
+
+#Find the active user of the system.
+Answer1: echo $USER
+Aswer2: w
+
+#Find out where are you located within the system.
+Answer: pwd
+
+#List all .txt files located at lorem.
+Get into lorem
+Answer: ls | grep txt
+
+#Count the number of lines in sed.txt located at lorem.
+cat sed.txt | wc -l
+
+#Count the number of files which name starts with lorem located at the whole lab directory.
+Answer: ls lorem* | wc -l
+
+#Find every appearance of et in at.txt located at lorem.
+Answer 1: into lorem folder --> grep "et" at.txt --> To identify them in red.
+Answer 2: grep -wc "et" at.txt --> For counting them
+
+#Find every appearance of the string et in at.txt located at lorem.
+Answer1: grep -i et at.txt --> to show them
+Answer2: grep -o -i et at.txt | wc -l --> To count them
