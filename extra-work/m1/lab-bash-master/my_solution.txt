@@ -1,1 +1,125 @@
 Bash lab solutions:
+
+ 726  git checkout -b lab-bash-master master
+  727  git branch
+  728  ll
+  729  cd module-1/lab-bash-master
+  730  cd module-1
+  731  ll
+  732  cd ..
+  733  cd extra-work/lab-bash-master
+  734  cd extra-work/
+  735  ll
+  736  cd m1/lab-bash-master/
+  737  clear
+  738  ls
+  739  cd exercices/
+  740  ll
+  741  cd ..
+  742  echo Hello World
+  743  mkdir new_dir
+  744  ll
+  745  cd lorem
+  746  cd ..
+  747  pwd
+  748  cp /home/sergio/repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem/sed.txt /home/sergio/repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/.
+  749  ll
+  750  cd lorem-copy/
+  751  ll
+  752  cd ..
+  753  cd lorem
+  754  cd ..
+  755  cp /home/sergio/repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem/* /home/sergio/repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/.
+  756  cd lorem
+  757  ll
+  758  cd ../lorem-copy/
+  759  ll
+  760  cd ../lorem
+  761  cat sed.txt
+  762  cat at.txt && lorem.txt
+  763  cat at.txt && cat lorem.txt
+  764  cd ../lorem-copy/
+  765  head -n3 sed.txt
+  766  tale -n3 sed.txt
+  767  tail -n3 sed.txt
+  768  nano sed.txt
+  769  tail -n3 sed.txt
+  770  man sed
+  771  sed -i -e 's/et/ET/gi' /at.txt
+  772  sed -i -e 's/et/ET/gi' lorem-copy/at.txt
+  773  ll
+  774  pwd
+  775  sed -i -e 's/et/ET/gi' /home/sergio/repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/at.txt
+  776  cat at.txt
+  777  who
+  778  pwd
+  779  man l
+  780  man la
+  781  man ls
+  782  ls --.txt
+  783  ls --txt
+  784  man ls
+  785  ls *.txt
+  786  cd ../lorem
+  787  ll *.txt
+  788  cat sed.txt | wc -l
+  789  cd ..
+  790  find lorem | xargs wc -l
+  791  find lorem.* | xargs wc -l
+  792  find lorem.txt | xargs wc -l
+  793  find /lorem.* | xargs wc -l
+  794  cd lorem
+  795  cat at.txt | wc -w "et"
+  796  ll
+  797  cat at.txt
+  798  cat at.txt | grep -c "et"
+  799  nano list_files.sh
+  800  vi list_files.sh
+  801  nano list_files.sh
+  802  bash list_files.sh 
+  803  cd ..
+  804  bash list_files.sh 
+  805  bash lorem/ba
+  806  bash lorem/list_files.sh 
+807  history 
+  808  conda deactivate
+  809  git branch
+  810  cd repos
+  811  cd dataptmad0420/
+  812  git branch
+  813  ll
+  814  cd extra-work/m1
+  815  ll
+  816  lab-bash-master/
+  817  cd lab-bash-master/
+  818  ll
+  819  nano my_solution.txt
+  820  ll
+  821  git branch
+  822  git status
+  823  git add my_solution.txt
+  824  git status
+  825  git commit -m "lab started"
+  826  git status
+  827  git log --all
+  828  clear
+  829  git branch -av
+  830  git checkout master
+  831  git branch
+  832  git checkouot lab-bash-master
+  833  git checkout lab-bash-master
+  834  ll
+  835  git status
+  836  history
+  837  git status
+  838  git push origin lab-bash-master 
+  839  git status
+  840  git add.
+  841  git add .
+  842  git status
+  843  conda env list
+  844  conda activate test-env
+  845  git branch
+  846  git commit -m "ejercicios casi terminados"
+  847  git push origin lab-bash-master 
+
