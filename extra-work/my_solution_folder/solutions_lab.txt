@@ -38,3 +38,5 @@ for values in lorem:
 
 
 
+less /proc/cpuinfo: this command shows us the cpu info on screen
+
