@@ -21,10 +21,15 @@ $ nano sed.txt
 $ Homo homini lupus.
 $ tail -n 3 sed.txt
 $ sed -i 's/et/ET/g' at.txt
-$
+$ whoami
 $ pwd
 $ cd ./..
 $ cd lorem
 $ ls *txt
-$ wc -l | sed.txt 
-
+$ wc -l | sed.txt
+$ cd ./..
+$ ls \lab-bash-master | wc -l 
+$ find lorem* | wc -l
+$ grep -w "et" .at.txt | wc -l
+$ grep "et" .at.txt | wc -1
+$ grep -r "et" ./lorem-copy | wc-l
