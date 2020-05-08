@@ -117,7 +117,7 @@ BONUS
   	mkdir lorem-uncompressed
 	tar -xf lorem-compressed.tar.gz -C lorem-uncompressed
 
- 	
+Lab Finished 	
  		
  		
  
