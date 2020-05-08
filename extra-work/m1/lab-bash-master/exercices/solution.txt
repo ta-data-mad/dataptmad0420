@@ -1,0 +1,79 @@
+1
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/exercices (master)
+$ echo Hello World
+
+2
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ mkdir new_dir
+
+3
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ rm -r new_dir
+
+4
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ cp sed.txt /c/Users/User/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
+5
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ cp at.txt lorem.txt /c/Users/User/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
+6
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ nano sed.txt
+
+7
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ cat at.txt lorem.txt
+
+8
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (lab-bash-master)
+$ head -n3 sed.txt
+
+9
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (lab-bash-master)
+$ tail -n3 sed.txt
+
+10
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (lab-bash-master)
+$ echo Homo homini lupus. >> sed.txt
+
+11
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (lab-bash-master)
+$ tail -n3 sed.txt
+
+12
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (lab-bash-master)
+$ sed 's/et/ET/' at.txt
+
+13
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (lab-bash-master)
+$ who -a
+
+14
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (lab-bash-master)
+$ pwd
+
+15
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ ls ?*.txt
+
+16
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ wc -l sed.txt
+
+17
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master (lab-bash-master)
+$ find -name "lorem*" | wc -l
+
+18
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ grep -o et lorem.txt | wc -l
+
+19
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ grep -o -w et lorem.txt | wc -l
+
+20
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (lab-bash-master)
+$ grep -iRl et|wc -l
