@@ -12,3 +12,13 @@ head -n3 sed.txt
 tail -n3 sed.txt
 echo Homo homini lupus. >> sed.txt
 tail -n3 sed.txt
+sed 's/et/ET/g' at.txt
+whoami
+pwd
+ls *.txt
+wc -l sed.txt
+find -iname "lorem*" -type f | wc -l
+grep -o et at.txt | wc -l
+grep -o " et " at.txt | wc -l
+cd ../lorem-copy/
+grep -o " et " * | wc -l
