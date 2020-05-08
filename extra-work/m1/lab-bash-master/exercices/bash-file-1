@@ -1,0 +1,19 @@
+echo First I am going to print "hello World"
+sleep 2
+echo Hello World
+sleep 3
+echo Second I will create a new directory
+sleep 2
+mkdir new_dir
+sleep 3
+echo and I will show it
+sleep 2
+ls
+sleep 3
+echo Then I will delete it
+sleep 2
+rm -r new_dir
+sleep 3
+echo and I will show it
+sleep 2
+ls
