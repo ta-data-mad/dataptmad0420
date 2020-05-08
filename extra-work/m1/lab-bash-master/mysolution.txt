@@ -1,7 +1,47 @@
-echo 'Hello World'
+1. echo 'Hello World'
 
-mkdir new_dir
+2. mkdir new_dir
 
-rm -r new_dir
+3. rm -r new_dir
 
-cp sed.txt /home/marta/Desktop/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+4. cp sed.txt /home/marta/Desktop/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
+5. cp lorem/{at.txt,lorem.txt} lorem-copy/.
+
+6. cat sed.txt
+
+7. cat {at.txt,lorem.txt}
+
+8. head -n 3 sed.txt
+
+9. tail -n 3 sed.txt
+
+10. nano sed.txt
+
+11. tail -n 3 sed.txt
+
+12. sed -i 's/et/ET/g' "at.txt"
+
+13. who
+
+14. pwd
+
+15. ls *.txt
+
+16. wc -l sed.txt
+
+17. find -type f -name "lorem*" | wc -l
+
+18. grep -o "et" at.txt | wc -l
+
+19. grep -o " et " at.txt | wc -l
+
+20. grep -ro " et " | wc -l
+it's also counting this file, until here, I knew it using:
+find -printf 'echo "$(grep -o " et " %p | wc -l) %p";' | sh
+
+21. 
+
+
+
+
