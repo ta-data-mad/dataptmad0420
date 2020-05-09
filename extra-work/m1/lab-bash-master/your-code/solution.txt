@@ -1,41 +1,60 @@
 
 Print Hello World in console:
 echo hello world
+
 Create a new folder named new_dir:
 mkdir new_dir
+
 Delete new_dir folder.
 rm -r new_dir
+
 Make a copy of sed.txt (located in the lorem folder) to lorem-copy:
 cp sed.txt /home/adja/boot_camp_data_ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
 Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;):
 cp at.txt loren.text lorem-copy /home/adja/boot_camp_data_ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
 Locate at lorem folder and show sed.txt content:
 cd lorem folder; cat sed,txt
+
 Locate at lorem folder and show at.txt and lorem.txt content:
 cat at.txt lorem.txt
+
 Locate at lorem-copy folder and show the first three lines of sed.txt:
 head sed.txt -n 3
+
 Locate at lorem-copy folder and show the last three lines of sed.txt:
 tail sed.txt -n 3
+
 Add Homo homini lupus. at the end of sed.txt located at lorem-copy:
 echo Homo homini lupus >> /home/adja/boot_camp_data_ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/sed.txt
+
 Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
 tail sed.txt -n 3
+
 Change every et to ET in at.txt located at lorem-copy (tip: use sed):
 sed "s/et/ET/" at.txt
+
 Find the active user of the system:
 whoami
+
 Find out where are you located within the system:
 pwd
+
 List all .txt files located at lorem:
 ls *.txt
+
 Count the number of lines in sed.txt located at lorem:
 wc -l sed.txt
+
 Count the number of files which name starts with lorem located at the whole lab directory:
 ls lorem* | wc -l
+
 Count the number of times et appears in at.txt located at lorem:
 cat at.txt |grep et -wo | wc -l
+
 Count the number of times the string et appears in at.txt located at lorem:
 cat at.txt |grep 'et' -wo | wc -l
+
 Count the number of times the string et appears in every file located at lorem-copy:
 cat * |grep 'et' -wo | wc -l
