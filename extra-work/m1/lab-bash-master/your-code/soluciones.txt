@@ -53,15 +53,16 @@ Count the number of times et appears in at.txt located at lorem.
     grep -c "et" lorem/at.txt
 
 Count the number of times the string et appears in at.txt located at lorem.
-    - Pregutnar: No entiendo la diferencia con el ejercicio anterior.
+    grep -o 'et' at.txt | wc -l
 
 Count the number of times the string et appears in every file located at lorem-copy.
     grep -c "et" lorem-copy/*.txt
 
 
 
-############################################################################
-
+#############################################################
+#####################  BONUS EXERCISES  #####################
+#############################################################
 
 Load your name in the variable name.
     name="LucasMadiedo"
@@ -77,18 +78,32 @@ Delete that folder.
 
 For every folder in lorem print the total number of characters of every file name. Try using a for loop to show every file name.
     Print every file.
+        for file in lorem/*;do
+        >   echo "${file##*/}"
+        >   done
+
     Print the number of characters of every file name.
     Print the number of characters of every file name with the following format: lorem has 5 characters lenght
 
 Show the system processes being executed (show them hierarchically):
     Using top or htop commands.
+        top + (shift + V)
     Using ps command with arguments.
         pstree
 
 Show processor info on screen.
+    lscpu
 
 Create 3 new alias and make them available everytime you login your session.
+    nano ~/.bashrc 
+    #Added these commands under Aliases section
+    alias ll="ls -lah"
+    alias ...="cd ../.."
+    alias lt='ls --human-readable --size -1 -S --classify'
 
 Compress lorem and lorem-copy folders in a file named lorem-compressed.tar.gz
+    tar -zcvf lorem-compressed.tar.gz lorem/. lorem-copy/.
 
 Uncompress lorem-compressed.tar.gz in lorem-uncompressed folder.
+    mkdir lorem-uncompressed
+    tar -xzvf lorem-compressed.tar.gz -C lorem-uncompressed/.
