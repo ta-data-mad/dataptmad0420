@@ -15,7 +15,6 @@ cd lorem/
 
 for i in $( ls ); do
 	echo $i
-	count = -n $i | wc -c
 	echo "$i has $count characthers length:"
 	echo -n $i | wc -c
 	echo '--- Next File:'
