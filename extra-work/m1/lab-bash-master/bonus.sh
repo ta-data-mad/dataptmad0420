@@ -1,3 +1,4 @@
+
 #Este es el código del bonus del lab-bash-master
 
 echo ------------------------------------
@@ -14,9 +15,9 @@ cd lorem/
 
 
 for i in $( ls ); do
-	echo $i
-	echo "$i has $count characthers length:"
-	echo -n $i | wc -c
-	echo '--- Next File:'
-done  
+	num_caract=$(echo ''${i}|grep -o '.'|wc -l)
+	echo ''${i} has ${num_caract} characters length''
+	echo '---Next File:'
+
+done
 
