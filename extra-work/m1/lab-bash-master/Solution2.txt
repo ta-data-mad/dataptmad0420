@@ -33,3 +33,5 @@ $ find lorem* | wc -l
 $ grep -w "et" .at.txt | wc -l
 $ grep "et" .at.txt | wc -1
 $ grep -r "et" ./lorem-copy | wc-l
+$ name=Sabine
+$ echo $name
