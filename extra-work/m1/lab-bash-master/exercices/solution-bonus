@@ -1,0 +1,40 @@
+1
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/exercices (lab-bash-master)
+$ name="David"
+
+2
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/exercices (lab-bash-master)
+$ echo $name
+
+3
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/exercices (lab-bash-master)
+$ mkdir $name
+
+4
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/exercices (lab-bash-master)
+$ rmdir $name
+
+5
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ for i in {sed.txt, at.txt, lorem.txt}
+> do
+> echo $i
+> a=$(wc -m $i)
+> echo $a
+> done
+(this one does not work)
+
+6
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem (lab-bash-master)
+$ ps
+
+7
+User@DESKTOP-1LTMNU3 MINGW64 /c/Users
+$ cat /proc/cpuinfo
+
+8
+User@DESKTOP-1LTMNU3 MINGW64 ~/Ironhack/dataptmad0420 (lab-bash-master)
+$ alias st="cd Ironhack/dataptmad0420/"
+(I was unable to find the bash congifuration files)
+
+9 I did not find a zip method in bash for windows, I had to install
