@@ -1,0 +1,60 @@
+1. Print Hello World in console
+- echo "Hello world"
+
+2. Create a new folder named new_dir
+- mkdir new_dir
+
+3. Delete new_dir folder.
+- rm -rf new_dir 
+
+4. Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+- cp /Users/luisdemiguel/Desktop/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem/sed.txt /Users/luisdemiguel/Desktop/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
+5. Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+- cp /Users/luisdemiguel/Desktop/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/* /Users/luisdemiguel/Desktop/Ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem/	
+
+6. Locate at lorem folder and show sed.txt content
+- cat sed.txt
+
+7. Locate at lorem folder and show at.txt and lorem.txt content.
+- cat at.txt lorem.txt
+
+8. Locate at lorem-copy folder and show the first three lines of sed.txt.
+- head -n 3 sed.txt
+
+9. Locate at lorem-copy folder and show the last three lines of sed.txt.
+- tail -n 3 sed.txt
+
+10. Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+- echo Homo homini lupus. >> sed.txt
+
+11. Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+- tail -n 4 sed.txt
+
+12. Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+- sed s/et/ET/g sed.txt
+
+13. Find the active user of the system.
+- pwd
+	
+14. Find out where are you located within the system.
+- pwd
+
+15. List all .txt files located at lorem.
+- ls *.txt
+
+16. Count the number of lines in sed.txt located at lorem.
+- wc -l sed.txt
+
+17. Count the number of files which name starts with lorem located at the whole lab directory.
+find . -name "lorem*" -type f | wc -l
+
+
+18. Count the number of times et appears in at.txt located at lorem.
+- grep "et" | wc -l at.txt
+
+19. Count the number of times the string et appears in at.txt located at lorem.
+- grep "et" | wc -w at.txt
+
+20. Count the number of times the string et appears in every file located at lorem-copy
+grep "et" | wc -c at.txt lorem.txt sed.txt
