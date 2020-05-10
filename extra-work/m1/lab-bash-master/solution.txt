@@ -55,3 +55,24 @@
    55  echo -e '\n Homo homini lupus \n' >> sed.txt					added a new line for before adding 'Homo ..' and added an empty line afterwards since the previous attempt didn't show up in a new line
    56  tail -3 sed.txt									verification
    57  history										third copy  to file solution.txt
+
+10.05.2020: bonus part in list_files.bh
+   01 NAME="Laura"; echo $NAME								Create a variable with my namy and print int (inside list_files.sh SCRIPT)
+   02 mkdir $NAME
+   03 rm -r $NAME
+   04 as shown on list_files.sh
+   04.1 for f in lorem/*.txt; do echo $f						Print every .txt  in lorem directory
+   04.2 for f in lorem/*.txt; do echo -n $f | wc -m					Print the number of characters of every file name.
+   04.3 on list_files.sh
+   05.1 top										Top shows time, how long the computer has been running, num users, load avg, total of tasks and num of tasks
+   05.1 htop is an interactive process viewer (needs to be installed)			sudo snap install htop  # version 2.2.0. https://ss64.com/bash/htop.html for info
+   05.2 ps -aux | less									Show system processes being executed using ps with arguments
+   06 lscpu										Show processor info on screen
+   07 alias alias_name='  '								Create 3 new alias and make them avialable everytime you login your session	 
+   07.1 unalias alias
+   08 tar -czvf name_of_compressed_file.gz <path>					tar is used to create tar.gz or .tgz
+												 -c "create archive" 
+												 -z "compress w/ gzip" 
+												 -v "display progress in terminal <verbose>"
+												 -f "specify filename of the archive"
+   09 tar -xvfz <filename> --directory <directory>						Uncompress tar.gz files into specific directory
