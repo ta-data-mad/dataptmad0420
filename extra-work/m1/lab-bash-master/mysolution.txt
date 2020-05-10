@@ -1,3 +1,5 @@
+EXERCISES
+
 1. echo 'Hello World'
 
 2. mkdir new_dir
@@ -37,11 +39,43 @@
 19. grep -o " et " at.txt | wc -l
 
 20. grep -ro " et " | wc -l
-it's also counting this file, until here, I knew it using:
+it's also counting this file, I knew it using:
 find -printf 'echo "$(grep -o " et " %p | wc -l) %p";' | sh
 
-21. 
+BONUS:
 
+1. #!/bin/bash
+name="Marta"
+echo $name
+
+2. mkdir $name
+rm -r $name
+
+3. for i in $(ls); do cat $i; done;
+
+wc -w *.txt
+using a loop:
+for i in $(ls); do wc -w $i; done;
+
+for i in $(ls); do echo "$i has $(wc -w < $i) characters lenght"; done
+
+4. lscpu
+
+5. [I don't want to create alias, also tried it and didn't make it work]
+I tried it by creating a new file: .bash_aliases in ~/ and adding:
+noquieroalias="pwd"
+Saving that file and running:
+if [ -f ~/.bash_aliases ]; then
+>     . ~/.bash_aliases
+> fi
+And:
+source ~/.bash_aliases
+
+
+6. tar -zcvf lorem-compressed.tar.gz {lorem,lorem-copy} 
+To extract it I copied it to a different folder:
+tar -xzvf lorem-compressed.tar.gz
+And worked
 
 
 
