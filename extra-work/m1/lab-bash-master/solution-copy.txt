@@ -1,0 +1,24 @@
+1. echo "Hello World"
+2. mkdir new_dir
+3. rm -d new_dir
+4. cp sed.txt ~/Documents/Bootcamp_Data/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+5. find lorem \( -name "at.txt" -or -name "lorem.txt"\) -exec cp {} lorem-copy \); 
+--> En este ejercicio me daba error (:missing closing ')' pero no lo he conseguido
+6. cat sed.txt
+7. cat at.txt lorem.txt
+8. head -n 3 sed.txt
+9. tail -n 3 sed.txt
+10. echo "Homo homini lupus" >> sed.txt
+11. tail -n 3 sed.txt
+12. sed -i "" 's/et/ET/g' at.txt3
+13. w
+14. pwd
+15. find . -type f -name "*.txt"
+16. wc -l sed.txt
+17. ls -d *lorem* | wc -l
+18. sed 's/et/et\n/g' at.txt | grep -c "et"
+19. grep -c "et" at.txt
+20. grep -c "et" *
+
+
+ 
