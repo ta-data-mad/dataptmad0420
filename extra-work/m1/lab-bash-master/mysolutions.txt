@@ -34,7 +34,7 @@ for i in *.txt ; do e=$(wc -m < $i) ; echo "${i%%.*} has ${e} characters lenght"
 top -o cpu
 ps aux -l
 sysctl -n machdep.cpu.brand_string
-cpuinfo="sysctl -n machdep.cpu.brand_string"
+alias cpuinfo="sysctl -n machdep.cpu.brand_string"
 alias ll="ls -alh"
-tar -czvf lore-compressed.tar.gz lore lorem-copy
+tar -czvf lorem-compressed.tar.gz lorem lorem-copy
 tar -xf lorem-compressed.tar.gz -C /Users/Nonis/desktop/ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-uncompressed
