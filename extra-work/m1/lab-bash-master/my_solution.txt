@@ -1,5 +1,7 @@
 Bash lab solutions:
 
+EXERCICES
+
  726  git checkout -b lab-bash-master master
   727  git branch
   728  ll
@@ -123,3 +125,35 @@ Bash lab solutions:
   846  git commit -m "ejercicios casi terminados"
   847  git push origin lab-bash-master 
 
+BONUS
+
+#!/bin/bash
+
+name="Sergio"
+echo $name
+
+mkdir $name
+rm -r $name
+
+files=/Home/Sergio/repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem/*
+
+for file in $files
+do
+  echo $(basename $file) | ls
+  echo -n "$file" | wc -m 
+done
+
+
+top
+ps -ux | less
+top -o %CPU
+
+
+gedit  ~/.bashrc
+alias rmi='rm -rfi'
+alias python3='python'
+alias whc='which'
+
+tar -czvf lorem-compressed.tar.gz /Home/Sergio/repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem /Home/Sergio/repos/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy 
+
+tar -xzvf lorem-compressed.tar.gz -C ~/lorem-uncompressed
