@@ -1,4 +1,4 @@
-ls
+##############################################
 echo Hello World
 mkdir new_dir
 rmdir new_dir/
@@ -22,3 +22,19 @@ grep -o et at.txt | wc -l
 grep -o " et " at.txt | wc -l
 cd ../lorem-copy/
 grep -o " et " * | wc -l
+###############################################
+#Bonus first part = in the file list_files.sh
+###############################################
+#Bonus last part
+# To show processor info on screen
+htop
+top
+# Alias
+alias ll='ls -hls'
+alias gits='git status'
+alias gitb='git branch'
+# To do these alias available everytime I include alias code in the file .bashrc located in my home directory
+# To Compress information
+tar -czvf lorem-compressed.tar.gz ./lorem ./lorem-copy
+# To uncompress information
+tar -xzvf lorem-compressed.tar.gz
