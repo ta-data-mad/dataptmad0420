@@ -1,0 +1,80 @@
+File with all the commands to solve the lab:
+
+## Exercises
+
+* Print `Hello World` in console.
+1- echo Hello World
+* Create a new folder named `new_dir`.
+2- mkdir new_dir
+* Delete `new_dir` folder.
+3- rm -r new_dir
+* Make a copy of `sed.txt` (located in the lorem folder) to lorem-copy. 
+4- cp sed.txt ../lorem-copy
+* Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use `;`). 
+5- cp at.txt ../lorem-copy; cd lorem.txt ../lorem-copy
+* Locate at lorem folder and show `sed.txt` content.
+6- cat sed.txt
+* Locate at lorem folder and show `at.txt` and `lorem.txt` content. 
+7- cat at.txt lorem.txt
+* Locate at lorem-copy folder and show the first three lines of `sed.txt`. 
+8- head -3 sed.txt
+* Locate at lorem-copy folder and show the last three lines of `sed.txt`. 
+9- tail -3 sed.txt
+* Add `Homo homini lupus.` at the end of `sed.txt` located at lorem-copy. 
+10- echo Homo homini lupus >> sed.txt
+* Locate at lorem-copy folder and show the last three lines of `sed.txt`. Now you should see `Homo homini lupus.`. 
+11- tail -3 sed.txt
+* Change every `et` to `ET` in `at.txt` located at lorem-copy (tip: use `sed`). 
+12- sed -i 's/et/ET/g' at.txt
+* Find the active user of the system.
+13- whoami
+* Find out where are you located within the system.
+14- pwd
+* List all `.txt` files located at lorem.
+15- ls *.kml
+* Count the number of lines in `sed.txt` located at lorem. 
+16- wc -l sed.txt
+* Count the number of **files** which name starts with `lorem` located at the whole lab directory.
+17- ls -l lorem* | wc -l
+* Count the number of times `et` appears in `at.txt` located at lorem.
+18- grep -o -i et at.txt | wc -l
+* Count the number of times the **string** `et` appears in `at.txt` located at lorem.
+19- grep -ow et at.txt | wc -l
+* Count the number of times the **string** `et` appears in every file located at lorem-copy.
+20- grep -ow et at.txt | wc -l
+
+
+## Bonus
+
+* Load your name in the variable `name`.
+1- name='Juan Antonio Gómez-Angulo'
+* Print that variable.
+2- echo $name
+* Create a folder named after the variable `name`.
+3- mkdir $name
+* Delete that folder. 
+4- rm -r $name
+* For every folder in `lorem` print the total number of characters of every file name. 
+Try using a **for** loop to show every file name.  
+    1. Print every file.
+    2. Print the number of characters of every file name.
+    3. Print the number of characters of every file name with the following format: `lorem has 5 characters lenght`
+5- for i in *  ; do x=$(wc -m < $i); echo "${i%%.*} has ${x} characters lenght" ; done
+* Show the system processes being executed (show them hierarchically):
+    1. Using top or htop commands.
+6.1- top -u juan #to see specific user process detalis
+    2. Using ps command with arguments.
+6.2- ps -aux | more
+* Show processor info on screen.
+7- lscpu
+* Create 3 new alias and make them available everytime you login your session.
+8- nano ~/bashrc 
+I've added in the file:
+#more new alias added during ironhack
+alias ..='cd ..'
+alias p3='PROMPT_DIRTRIM=3'
+alias p1='PROMPT_DIRTRIM=1'
+* Compress lorem and lorem-copy folders in a file named lorem-compressed.tar.gz
+9- tar -czf lorem-compressed.tar.gz lorem lorem-copy
+* Uncompress lorem-compressed.tar.gz in lorem-uncompressed folder.
+10- tar -xf lorem-compressed.tar.gz -C /home/juan/IronHack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-uncompressed
