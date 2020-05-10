@@ -21,4 +21,39 @@ cat * | grep -c et
 
 BASH FILES
 
+Solutions in "list_files.sh" file
+
+BONUS
+
+name=victor
+echo $name
+mkdir $name
+rm -r $name
+--------
+for file in *
+do
+	echo $file
+	expr length $file
+done
+--------
+for file in *
+do
+	echo $file has $(expr length $file) characters lenght
+done
+--------
+top (una vez ejecutado top -> V)
+ps --forest
+--------
+cat /proc/cpuinfo
+--------
+nano ~/.bashrc
+Dentro del archivo incluimos los siguientes alias:
+alias my-name='echo victor'
+alias la='ls -alh'
+alias ..='cd ..'
+Guardar y cerrar
+--------
+tar -czvf lorem-compressed.tar.gz lorem/ lorem-copy/ 
+
+mkdir lorem-uncompressed && tar -xzvf lorem-compressed.tar.gz -C lorem-uncompressed
 
