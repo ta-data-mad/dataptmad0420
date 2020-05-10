@@ -76,3 +76,6 @@
 												 -v "display progress in terminal <verbose>"
 												 -f "specify filename of the archive"
    09 tar -xvfz <filename> --directory <directory>						Uncompress tar.gz files into specific directory
+
+   10 comments added to increase user understanding of list_files.bh script as runs. 
+
