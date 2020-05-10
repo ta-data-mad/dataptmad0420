@@ -1,0 +1,39 @@
+echo Hello World
+mkdir new_dir
+rmdir new_dir
+cp sed.txt ../lorem-copy
+cp at.txt lorem.txt ../lorem-copy
+cat sed.txt
+cat at.txt lorem.txt
+head -3 sed.txt
+tail -3 sed.txt
+echo Homo homini lupus. >> sed.txt
+tail -3 sed.txt
+sed 's/et/ET/g' at.txt
+who
+pwd
+ls *.txt
+wc -l sed.txt
+find . -type f -name "lorem*" | wc -l
+grep -ow et at.txt | wc -l
+grep -o et at.txt | wc -l
+grep -o et *.txt | wc -l
+Bash Files
+nano list_files.sh
+bash list_files.sh
+
+Bonus
+name=Juan
+echo $name
+mkdir $name
+rmdir $name
+for i in lorem ; do ls $i ; done
+for i in *.txt ; do wc -m $i ; done
+for i in *.txt ; do a=$(wc -m < $i) ; echo "${i%%.*} has ${a} characters lenght" ; done
+top -o cpu
+ps aux -l
+sysctl -n machdep.cpu.brand_string
+alias macinfo="sysctl -n machdep.cpu.brand_string"
+alias la="ls -alh"
+tar -czvf lorem-compressed.tar.gz lorem lorem-copy
+tar -xf lorem-compressed.tar.gz -C /Users/juandediegosuanzes/desktop/ironhack/dataptmad0420/extra-work/m1/lab-bash-master/lorem-uncompressed
