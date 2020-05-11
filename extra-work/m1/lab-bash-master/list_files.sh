@@ -48,3 +48,13 @@ ps -axrj
 echo
 
 
+#Show processor info on screen
+sudo dmidecode --type processor
+echo
+
+#Create 3 new alias and make them available everytime you login your session.
+echo For create 3 new alias and make_ them available everytime you login your session, 
+echo you have to open the file: ~/.bashrc and put your alias with this form:
+echo alias (name alias)=(command)
+
+
