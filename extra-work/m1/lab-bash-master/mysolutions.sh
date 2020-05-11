@@ -1,5 +1,5 @@
 
-#Print Hello World in console.
+#Print Hello World in  console.
 echo "Hellow World"
 
 #Create a new folder named new_dir
