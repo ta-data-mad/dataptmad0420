@@ -53,8 +53,14 @@ sudo dmidecode --type processor
 echo
 
 #Create 3 new alias and make them available everytime you login your session.
-echo For create 3 new alias and make_ them available everytime you login your session, 
+echo For create 3 new alias and make_ them available everytime you login your session,
 echo you have to open the file: ~/.bashrc and put your alias with this form:
-echo alias (name alias)=(command)
+echo 'alias'"'"'name alias'"'"'='"'"'command'"'"
 
+#Compress lorem and lorem-copy folders in a file named lorem-compressed.tar.gz
+#tar -czf nombre-directorio.tar.gz  nombre-directorio
+tar -czvf lorem-compressed.tar.gz lorem/*  lorem-copy/*
+echo
 
+#Uncompress lorem-compressed.tar.gz in lorem-uncompressed folder.
+tar xvf lorem-compressed.tar.gz -C lorem-uncompressed
