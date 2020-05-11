@@ -58,3 +58,5 @@ find . -name "lorem*" -type f | wc -l
 
 20. Count the number of times the string et appears in every file located at lorem-copy
 grep "et" | wc -c at.txt lorem.txt sed.txt
+
+to finish lab
