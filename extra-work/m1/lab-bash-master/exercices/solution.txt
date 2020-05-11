@@ -1,0 +1,261 @@
+Josue Rivera Colon
+
+#Begining
+
+/c/projects/dataptmad0420/extra-work/m1 (master)
+$ cd lab-bash-master
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  outputs/  README.md
+
+#####################################################
+
+#Print
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ echo Wello World
+Wello World
+
+#############################################################
+
+#Create new_dir
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ mkdir new_dir
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  new_dir/  outputs/  README.md
+
+#############################################################
+
+#Erease new_dir
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ rmdir new_dir
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  outputs/  README.md
+
+########################################################
+
+#Copy sed.txt in lorem-copy/
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ cd lorem
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ ls
+at.txt  lorem.txt  sed.txt
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ cp sed.txt /c/projects/git_lab/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ cd ..
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ cd lorem-copy
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ ls
+sed.txt
+##############################################################
+
+#Copy the rest of the lorem/ repository in one line of code.
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ cd ..
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ cd lorem/;cp at.txt lorem.txt /c/projects/git_lab/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/;cd ..;cd lorem-copy;ls
+at.txt  lorem.txt  sed.txt
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ ls
+at.txt  lorem.txt  sed.txt
+
+###########################################################
+
+# Show content of sed.txt
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ cd ..;cd lorem;cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+
+
+############################################################
+
+#Show content of at.txt and lorem.txt
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ cat lorem.txt ;cat at.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+Et harum quidem rerum facilis est et expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+ut et voluptates repudiandae sint et molestiae non recusandae.
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+
+###################################################################
+
+#Print first 3 lines in sed.txt .
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ cat sed.txt | sed -n -r '1,3p'
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+
+#####################################################################
+
+#Print last 3 lines in sed.txt .
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ cat sed.txt | sed -n -r '7,9p'
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+######################################################################
+
+#Add Homo homini lupus. in the sed.txt located in lorem-copy/.
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ cd ..;cd lorem-copy;echo "Homo homini lupus." >> sed.txt
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus.
+
+################################################################################
+
+#Show last 3 lines of sed.txt in the lorem-copy/.
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ cat sed.txt | sed -n -r '7,9p'
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus.
+
+#############################################################################
+
+#Change et for ET in at.txt in lorem-copy/ 
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ cat at.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+Et harum quidem rerum facilis est et expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+ut et voluptates repudiandae sint et molestiae non recusandae.
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ sed 's/et/ET/g' at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+
+
+##########################################################################
+
+#Location in the system
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ pwd
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+
+################################################################################
+
+#list al the .txt file in lorem/
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ cd ..;cd lorem;ll
+total 9
+-rw-r--r-- 1 jzjos 197609 861 May  6 12:45 at.txt
+-rw-r--r-- 1 jzjos 197609 451 May  6 12:45 lorem.txt
+-rw-r--r-- 1 jzjos 197609 881 May  6 12:45 sed.txt
+
+#############################################################################
+
+#Number of lines in sed.txt located in lorem/
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ wc -l sed.txt
+8 sed.txt
+
+##################################################
+
+# Count the number of files which name starts with lorem located at the whole lab directory.
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ find . -type f -name "lorem*"
+./lorem/lorem.txt
+./lorem-copy/lorem.txt
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master (master)
+$ find . -type f -name "lorem*" | wc
+      2       2      41
+
+#######################################################################
+
+#Count the number of times et appears in at.txt located at lorem.
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ git grep -o -w "et" at.txt| wc -w
+8
+ 
+###########################################################################
+
+#Count the number of times the string et appears in at.txt located at lorem.
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem (master)
+$ git grep -o "et" at.txt| wc -w
+10
+
+#############################################################################
+
+#Count the number of times the string et appears in every file located at lorem-copy.
+
+/c/projects/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy (master)
+$ grep -o "et"  ./* | wc -w
+17
