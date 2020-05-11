@@ -36,17 +36,25 @@ tail -n 3 /home/david/Documents/dataptmad0420/extra-work/m1/lab-bash-master/lore
 sed 's/et/ET/' /home/david/Documents/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy/at.txt
 
 #Find the active user of the system.
+w
 
 #Find out where are you located within the system.
+eval echo "~$david"
 
 #List all .txt files located at lorem.
+find /home/david/Documents/dataptmad0420/extra-work/m1/lab-bash-master/lorem -type f -name "*.txt"
 
 #Count the number of lines in sed.txt located at lorem.
+wc -l /home/david/Documents/dataptmad0420/extra-work/m1/lab-bash-master/lorem/sed.txt
 
 #Count the number of files which name starts with lorem located at the whole lab directory.
+find /home/david/Documents/dataptmad0420/extra-work/m1/lab-bash-master -type f -name "lorem*" | wc -l
 
 #Count the number of times et appears in at.txt located at lorem.
 
+
 #Count the number of times the string et appears in at.txt located at lorem.
 
+
 #Count the number of times the string et appears in every file located at lorem-copy.
+
