@@ -1,0 +1,96 @@
+Aqui es donde voy a copiar mi código
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ echo Hello World
+Hello World
+
+
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ mkdir new_dir
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ rm -r new_dir
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ 
+
+
+
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420$ cd extra-work/
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work$ ls
+m1  m2  m3
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work$ cd m1
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1$ ls
+lab-advanced-web-scraping  lab-bash-master   lab-errhand-listcomp  lab-generators-functions  lab-job-board-scraping  lab-rss           pandas-project     python-project
+lab-api-scavenger          lab-data-vikings  lab-functions         lab-import-export         lab-parsing-api         lab-web-scraping  pipelines-project  web-project
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1$ cd lab-bash-master/
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ ls
+exercices  inputs  lorem  lorem-copy  outputs  README.md  solution.txt
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ cd lorem
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ ls *.txt
+at.txt  lorem.txt  sed.txt
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ wc -l sed.txt
+8 sed.txt
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ 
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ cd ..
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ pwd
+/home/jc/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ ls -l lorem* | wc -l
+11
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ cd lorem
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ ls
+at.txt  lorem-copy  lorem.txt  sed.txt
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ wc -w at.txt
+120 at.txt
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ grep -ow 'et' at.txt | wc -l
+8
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem$ cd ..
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ ls
+exercices  inputs  lorem  lorem-copy  outputs  README.md  solution.txt
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ cd lorem-copy/
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy$ pwd
+/home/jc/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy$ grep -ow 'et' lorem-copy | wc -l
+grep: lorem-copy: No existe el archivo o el directorio
+0
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy$ cd ..
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ grep -ow 'et' lorem-copy | wc -l
+grep: lorem-copy: Es un directorio
+0
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ grep -ow 'et' lorem-copy/ | wc -l
+grep: lorem-copy/: Es un directorio
+0
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ grep -ow 'et' lorem-copy/. | wc -l
+grep: lorem-copy/.: Es un directorio
+0
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master$ cd lorem-copy/
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy$ grep -ri "et" *
+lorem/lorem-copy:totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+lorem/lorem-copy:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+lorem/lorem-copy:sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+lorem/at.txt:At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+lorem/at.txt:deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+lorem/at.txt:provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+lorem/at.txt:Et harum quidem rerum facilis est ET expedita distinctio. 
+lorem/at.txt:Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+lorem/at.txt:ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+lorem/at.txt:Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+lorem/sed.txt:totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+lorem/sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+lorem/sed.txt:sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+lorem/lorem.txt:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+sed.txt:totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed.txt:sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy$ grep -ow  "et" *
+grep: lorem: Es un directorio
+sed.txt:et
+sed.txt:et
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy$ grep -ri "et" * | wc -l
+17
+jc@jc-VirtualBox:~/Escritorio/ironhack_git/dataptmad0420/extra-work/m1/lab-bash-master/lorem-copy$ 
+"et" *
+
+"Finalizacion" 
