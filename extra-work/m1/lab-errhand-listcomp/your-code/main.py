@@ -1,27 +1,26 @@
 #Example: 
 
 eggs = (1,3,8,3,2)
-
 my_listComprehension = [1/egg for egg in eggs]
-
 print(my_listComprehension)
 
+
 #Insert here the module/library import statements 
-
-
+from math import sqrt
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+square = [sqrt(x) for x in range(20+1)]; print(f"\nSquares: {square}\n")
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+power_of_two = [2**x for x in range(50+1)]; print(f"\nPower of two: {power_of_two}\n")
 
-
+"""
 
 #3. Calculate the square root of the first 100 numbers. Use sqrt as the name of the list.
 # You will probably need to install math library with pip and import it in this file.  
@@ -33,7 +32,7 @@ print(my_listComprehension)
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+my_list = [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]; print(my_list)
 
 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
@@ -188,4 +187,4 @@ def linux_interaction():
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
-
+"""
