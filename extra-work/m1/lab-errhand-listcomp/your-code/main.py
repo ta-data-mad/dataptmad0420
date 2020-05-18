@@ -3,6 +3,7 @@ from string import ascii_lowercase
 import re
 from os import listdir
 from random import randint
+import sys
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
@@ -110,47 +111,73 @@ finally:
 # Check in provided resources the type of error you may use. 
 print('\n#17')
 
-userNum_2 = input('Give me a first number....\t')
-userNum_1 = input('Give me a second number...\t')
+userNum_1 = input('Give me a first number....\t')
+userNum_2 = input('Give me a second number...\t')
+print('\n')
 
 try:
-    if isinstance(userNum_1, int) and isinstance(userNum_2, int):
-        result = int(userNum_1) % int(userNum_2)
-        print(result)
+     if userNum_1.isdigit() and userNum_2.isdigit():
+        print(f'[{userNum_1.isdigit()}|{userNum_2.isdigit()}] Begining the operation ...\n')
 
-except (TypeError, ValueError):
-    print('That is not a valid input')
+        if int(userNum_2) != 0:
+            result = float(userNum_1) / float(userNum_2)
+            print(f'The operation {userNum_1} / {userNum_2} is: {result}')
+        else:
+            raise ValueError('Zero is not a valid input. Try again!')
+     else:
+         raise TypeError
+
+except (TypeError):
+    print('One of the inputs is not a digit. Try again!')
+
+finally:
+    print('Process finished')
 
 
-"""
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
+print('\n#18')
 
-f = open('testfile','r')
-f.write('Test write this')
+try:
+    f = open('testfile','r')
+    f.write('Test write this')
 
+except (FileNotFoundError):
+    print('The file does not exist. Check directory')
 
 
 
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
+print('\n#19')
 
-fp = open('myfile.txt')
+try:
+    fp = open('myfile.txt')
     line = f.readline()
-    i = int(s.strip())
 
-
+    if s.strip() == int:
+        i = int(s.strip())
+    else:
+        raise ValueError('The data could not be convertable to int')
+    
+except (FileNotFoundError, ):
+    print('The file does not exist. Check directory')
 
 
 #20. The following function can only run on a Linux system. 
 # The assert in this function will throw an exception if you call it on an operating system other than Linux. 
 # Handle this exception using try and except blocks. 
-# You will probably need to import sys 
+# You will probably need to import sys
 
-def linux_interaction():
-    assert ('linux' in sys.platform), "Function can only run on Linux systems."
-    print('Doing something.')
+print('\n#20')
 
+try:
+    if 'linux' in sys.platform:
+    def linux_interaction():
+        assert ('linux' in sys.platform), "Function can only run on Linux systems."
+        print('Doing something.')
+
+except
 
 
 ### Bonus Questions ###
@@ -173,7 +200,7 @@ def linux_interaction():
 # 23. Define a customised exception to handle not accepted values. 
 # You have the following user inputs and the Num_of_sections can not be less than 2.
 # Hint: Create a class derived from the pre-defined Exception class in Python
-
+"""
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
