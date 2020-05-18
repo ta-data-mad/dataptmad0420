@@ -52,7 +52,7 @@ SELECT
 authors.au_id  AS 'AUTHOR_ID',
 authors.au_lname AS 'LAST_NAME',
 authors.au_fname AS 'FIRST_NAME',
-sales.qty AS 'TOTAL'
+COALESCE (sales.qty,0) AS 'TOTAL'
 FROM authors
 LEFT JOIN titleauthor
 ON titleauthor.au_id = authors.au_id 
