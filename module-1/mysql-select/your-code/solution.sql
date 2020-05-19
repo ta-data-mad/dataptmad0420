@@ -75,14 +75,15 @@ SELECT
 	SUM(sales.qty) as total
 FROM 
 	titles
-JOIN 
+LEFT JOIN 
 	titleauthor 
 	on titleauthor.title_id = titles.title_id
-JOIN 
+LEFT JOIN 
 	authors 
 	on authors.au_id = titleauthor.au_id
-JOIN 
+LEFT JOIN 
 	sales 
-	on sales.title_id = titles.title_id
+	on sales.title_id = titles.title_id 
 GROUP BY authors.au_id 
 ORDER BY total DESC;
+
