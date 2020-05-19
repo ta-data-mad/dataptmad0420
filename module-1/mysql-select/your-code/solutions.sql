@@ -16,7 +16,7 @@ join titleauthor
 on titles.title_id = titleauthor.title_id 
 join publishers 
 on titles.pub_id = publishers.pub_id 
-join authors 
+join authors
 on authors.au_id = titleauthor.au_id
 GROUP BY authors.au_id
 
@@ -46,6 +46,3 @@ left join sales
 on titles.title_id = sales.title_id
 GROUP BY authors.au_id
 ORDER BY TOTAL DESC;
-
-
-
