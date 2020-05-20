@@ -54,7 +54,7 @@ SELECT
 ISNULL (authors.au_id as [AUTHOR ID],0) 
 authors.au_lname AS LAST_NAME, 
 authors.au_fname AS FIRST_NAME,
-sum(sales.qty)
+COALESCE(SUM(sales.qty),0) AS 'TOTAL'
 FROM authors 
 LEFT Join titleauthor 
 on titleauthor.au_id = authors.au_id 
