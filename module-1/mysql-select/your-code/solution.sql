@@ -38,4 +38,21 @@ ORDER BY TITLE_COUNT desc;
 SELECT count (*)
 from titleauthor;
 
+-- 3rd challenge:
+-- Who are the top 3 authors who have sold the highest number of titles? Write a query to find out.
+
+select 
+authors.au_id as AUTHOR_ID, 
+authors.au_lname as LAST_NAME, 
+authors.au_fname as FIRST_NAME,  
+sum (titles.ytd_sales) as TOTAL
+from titles
+join titleauthor on titleauthor.title_id = titles.title_id
+join authors on authors.au_id = titleauthor.au_id
+GROUP BY authors.au_fname
+ORDER BY TOTAL desc
+LIMIT 3;
+
+
+
 
