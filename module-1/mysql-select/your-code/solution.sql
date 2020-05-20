@@ -69,21 +69,24 @@ WHERE
 --Challenge 4
 
 SELECT 
-    authors.au_id as author_id,
+	authors.au_id as author_id,
 	authors.au_lname as last_name,
 	authors.au_fname as first_name,
-	SUM(sales.qty) as total
+	ifnull(SUM(sales.qty), 0) as total
 FROM 
-	titles
+	authors
 LEFT JOIN 
 	titleauthor 
-	on titleauthor.title_id = titles.title_id
+	on titleauthor.au_id = authors.au_id 
+
 LEFT JOIN 
-	authors 
-	on authors.au_id = titleauthor.au_id
+	titles 
+	on titleauthor.title_id = titles.title_id
 LEFT JOIN 
 	sales 
 	on sales.title_id = titles.title_id 
 GROUP BY authors.au_id 
 ORDER BY total DESC;
-
+	
+	
+	
