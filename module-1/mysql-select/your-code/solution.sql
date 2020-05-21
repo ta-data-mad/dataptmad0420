@@ -53,6 +53,17 @@ GROUP BY authors.au_fname
 ORDER BY TOTAL desc
 LIMIT 3;
 
+-- 4th challenge:
+-- Now modify your solution in Challenge 3 so that the output will display all 23 authors instead of the top 3. Note that the authors who have sold 0 titles should also appear in your output (ideally display 0 instead of NULL as the TOTAL). Also order your results based on TOTAL from high to low.
 
-
+select 
+authors.au_id as AUTHOR_ID,
+authors.au_lname as LAST_NAME,
+authors.au_fname as FIRST_NAME,
+IFNULL (sum (titles.ytd_sales),0) as TOTAL
+from authors
+left join titleauthor on titleauthor.au_id = authors.au_id
+left join titles on titles.title_id = titleauthor.title_id
+GROUP BY authors.au_fname
+ORDER BY TOTAL desc;
 
