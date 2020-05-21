@@ -12,6 +12,7 @@ join publishers on publishers.pub_id = titles.pub_id ;
 
 
 -- Challenge 2 - Who Have Published How Many At Where?
+
 select authors.au_id as "AUTHOR ID",
 authors.au_lname as "LAST NAME", 
 authors.au_fname as "FIRST NAME", 
@@ -33,6 +34,7 @@ order by "TITLE COUNT" desc, "AUTHOR ID" desc;
 
 
 -- Challenge 3 - Best Selling Authors
+
 select authors.au_id as "AUTHOR ID",
 authors.au_lname as "LAST NAME",
 authors.au_fname as "FIRST NAME",
@@ -47,6 +49,7 @@ limit 3;
 
 
 -- Challenge 4 - Best Selling Authors Ranking
+
 select authors.au_id as "AUTHOR ID",
 authors.au_lname as "LAST NAME",
 authors.au_fname as "FIRST NAME",
@@ -56,3 +59,4 @@ left join titleauthor on authors.au_id = titleauthor.au_id
 left join sales on titleauthor.title_id = sales.title_id
 group by  authors.au_id
 order by "TOTAL" desc;
+
