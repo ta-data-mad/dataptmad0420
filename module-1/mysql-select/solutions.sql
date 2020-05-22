@@ -43,7 +43,7 @@ select
 authors.au_id as author_id,
 authors.au_fname as first_name,
 authors.au_lname as last_name,
-count(sales.qty) as total
+sum(sales.qty) as total
 from titles
 join titleauthor
 on titleauthor.title_id = titles.title_id
@@ -63,7 +63,7 @@ select
 authors.au_id as author_id,
 authors.au_fname as first_name,
 authors.au_lname as last_name,
-count(sales.qty) as total
+coalesce(sum(sales.qty),0) as total
 from authors
 left join titleauthor
 on authors.au_id = titleauthor.au_id
