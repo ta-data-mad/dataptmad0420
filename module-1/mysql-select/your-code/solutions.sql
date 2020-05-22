@@ -2,8 +2,8 @@
 
 SELECT
 authors.au_id as "Author ID",
-authors.au_lname as "First Name",
-authors.au_fname AS "Last Name",
+authors.au_lname as "Last Name",
+authors.au_fname AS "First Name",
 titles.title AS "Title",
 publishers.pub_name as "Publisher"
 from titles
@@ -29,17 +29,18 @@ join authors
 on authors.au_id = titleauthor.au_id
 join publishers 
 on publishers.pub_id  = titles.pub_id
-GROUP BY authors.au_id,authors.au_fname ,authors.au_lname,publishers.pub_name;
+GROUP BY authors.au_id,authors.au_fname ,authors.au_lname,publishers.pub_name
+order by "Title Count" desc
 
 //check_challenge_2
 select count(au_id) from titleauthor;
 
 -- Challenge3 Best Selling Authors -- 
 
-select authors.au_id as "AUTHOR ID",
-authors.au_lname as "LAST NAME",
-authors.au_fname as "FIRST NAME",
-sum(sales.qty) as TOTAL
+select authors.au_id as "Author ID",
+authors.au_lname as "Last Name",
+authors.au_fname as "First Name",
+sum(sales.qty) as "Total"
 from authors
 left join titleauthor on authors.au_id = titleauthor.au_id 
 left join sales on titleauthor.title_id = sales.title_id
@@ -47,5 +48,15 @@ group by  authors.au_id
 order by TOTAL desc
 limit 3;
 
--- Challenge 4
+-- Challenge 4 Best Selling Authors Ranking --
+
+select authors.au_id as "Author ID",
+authors.au_lname as "Last Name",
+authors.au_fname as "First Name",
+coalesce(sum(sales.qty),0) as "Total"
+from authors
+left join titleauthor on authors.au_id = titleauthor.au_id 
+left join sales on titleauthor.title_id = sales.title_id
+group by  authors.au_id
+order by "TOTAL" desc;
 
