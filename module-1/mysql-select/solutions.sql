@@ -11,8 +11,6 @@ join publishers
 on titles.pub_id = publishers.pub_id
 order by "AUTHOR ID" asc, "TITLE" desc;
 
-
-
 Select Count(*)
 from titleauthor;
 
@@ -40,7 +38,6 @@ join publishers
 on titles.pub_id = publishers.pub_id;
 
 Challenge 3
-
 
 select authors.au_id as "AUTHERS ID", authors.au_lname as "LAST NAME", authors.au_fname as "FIRST NAME", sum(Sales.qty) as "TOTAL"
 from authors
