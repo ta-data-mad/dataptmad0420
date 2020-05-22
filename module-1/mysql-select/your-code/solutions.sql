@@ -49,3 +49,19 @@ on sales.title_id = titles.title_id
 group by AUTHORS.au_id 
 order by TOTAL_SALES DESC
 limit 3;
+
+CHALLENGE 4
+SELECT
+authors.au_id as AUTHORID,
+authors.au_lname as LASTNAME,
+authors.au_fname as FIRSTNAME,
+COALESCE (SUM(sales.qty),0) AS TOTAL_SALES
+from authors
+left join titleauthor 
+on titleauthor.au_id = authors.au_id
+left join titles 
+on titleauthor.title_id = titles.title_id 
+left join sales
+on sales.title_id = titleauthor.title_id 
+group by authors.au_id
+order by TOTAL_SALES DESC;
