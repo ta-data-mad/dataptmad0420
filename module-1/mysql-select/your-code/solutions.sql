@@ -32,8 +32,6 @@ on publishers.pub_id  = titles.pub_id
 GROUP BY authors.au_id,authors.au_fname ,authors.au_lname,publishers.pub_name
 order by "Title Count" desc
 
-//check_challenge_2
-select count(au_id) from titleauthor;
 
 -- Challenge3 Best Selling Authors -- 
 
@@ -45,7 +43,7 @@ from authors
 left join titleauthor on authors.au_id = titleauthor.au_id 
 left join sales on titleauthor.title_id = sales.title_id
 group by  authors.au_id
-order by TOTAL desc
+order by Total desc
 limit 3;
 
 -- Challenge 4 Best Selling Authors Ranking --
@@ -58,5 +56,5 @@ from authors
 left join titleauthor on authors.au_id = titleauthor.au_id 
 left join sales on titleauthor.title_id = sales.title_id
 group by  authors.au_id
-order by "TOTAL" desc;
+order by "Total" desc;
 
