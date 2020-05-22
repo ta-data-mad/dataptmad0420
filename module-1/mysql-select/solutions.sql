@@ -69,7 +69,7 @@ left join titleauthor
 on authors.au_id = titleauthor.au_id
 left join titles
 on titleauthor.title_id = titles.title_id
-join sales
+left join sales
 on sales.title_id = titles.title_id
 group by authors.au_id
 order by total desc
