@@ -46,4 +46,3 @@ LEFT join sales
 on titles.title_id = sales.title_id
 GROUP BY authors.au_id
 order by "TOTAL" desc;
-
