@@ -51,7 +51,7 @@ limit 3
 --CHALLENGE 4
 
 SELECT
-ISNULL (authors.au_id as [AUTHOR ID],0) 
+authors.au_id as [AUTHOR ID]
 authors.au_lname AS LAST_NAME, 
 authors.au_fname AS FIRST_NAME,
 COALESCE(SUM(sales.qty),0) AS 'TOTAL'
