@@ -50,7 +50,25 @@ GROUP BY authors.au_lname, authors.au_fname, authors.au_id,sales.qty
 ORDER BY quantity DESC 
 LIMIT 3;
 
-
+#its giving me double writers I think i tried distinct but it gave me an error.
 CHALLENGE 4
+SELECT
+authors.au_id as author_id,
+authors.au_fname as author_first_name,
+authors.au_lname as author_last_name, 
+SUM(sales.qty) as quantity
+FROM authors 
+join titleauthor 
+on authors.au_id = titleauthor.au_id
+JOIN titles 
+on titleauthor.title_id = titles.title_id 
+JOIN sales 
+on sales.title_id = titleauthor.title_id
+GROUP BY authors.au_lname, authors.au_fname, authors.au_id,sales.qty
+ORDER BY quantity DESC 
+LIMIT 28;<-- I used the limit so it only gives us 28 as the exercise asks us to do
+--bc it doesnt let me use the sum, or count. it only gave me errors, I dont re
+--ally understand the language I think, I've read the sql tutorial 3 times 
+--and still dont get it.
 
 
