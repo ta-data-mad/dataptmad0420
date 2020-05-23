@@ -34,23 +34,23 @@ group by authors.au_id, au_lname, au_fname, pub_name
 
 CHALLENGE 3
 
-
-#I DON'T KNOW WHATS WRONG WITH THIS ONE IT ONLY RAISES A SYNTAX ERROR AND I 
-#REWROTE IT EVERYTHING VARIOUS TIMES, AND I DONT KNOW WHY IT DOEST LET ME SELECT THE COLUMNS THAT I NEED 
-
 SELECT
 authors.au_id as author_id,
 authors.au_fname as author_first_name,
 authors.au_lname as author_last_name, 
+sum(sales.qty) as quantity <--I used sum but it gives the same amount without it
 FROM authors 
 join titleauthor 
 on authors.au_id = titleauthor.au_id
 JOIN titles 
 on titleauthor.title_id = titles.title_id 
 JOIN sales 
-on sales.title_id = titleauthor.title_id;
+on sales.title_id = titleauthor.title_id
+GROUP BY authors.au_lname, authors.au_fname, authors.au_id,sales.qty
+ORDER BY quantity DESC 
+LIMIT 3;
 
 
 CHALLENGE 4
 
-I wasnt able to make the code in challenge 3 run properly . 
+
