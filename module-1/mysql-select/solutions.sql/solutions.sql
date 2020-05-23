@@ -35,4 +35,22 @@ group by authors.au_id, au_lname, au_fname, pub_name
 CHALLENGE 3
 
 
+#I DON'T KNOW WHATS WRONG WITH THIS ONE IT ONLY RAISES A SYNTAX ERROR AND I 
+#REWROTE IT EVERYTHING VARIOUS TIMES, AND I DONT KNOW WHY IT DOEST LET ME SELECT THE COLUMNS THAT I NEED 
 
+SELECT
+authors.au_id as author_id,
+authors.au_fname as author_first_name,
+authors.au_lname as author_last_name, 
+FROM authors 
+join titleauthor 
+on authors.au_id = titleauthor.au_id
+JOIN titles 
+on titleauthor.title_id = titles.title_id 
+JOIN sales 
+on sales.title_id = titleauthor.title_id;
+
+
+CHALLENGE 4
+
+I wasnt able to make the code in challenge 3 run properly . 
