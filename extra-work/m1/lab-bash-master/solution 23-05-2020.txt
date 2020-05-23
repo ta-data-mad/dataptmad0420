@@ -1,0 +1,35 @@
+echo 'Hello World'
+mkdir new_dir
+rm -r new_dir
+cp lorem/sed.txt lorem-copy/.
+cd lorem
+ls
+cd../
+cp lorem/at.txt  lorem/lorem.txt lorem-copy/. 
+cd lorem
+cat sed.txt
+cat at.txt lorem.txt
+cd ../lorem-copy
+head -n 3 sed.txt
+tail -n 3 sed.txt
+echo 'Homo homini lupus'>> sed.txt
+tail -n 3 sed.txt
+sed 's/et/ET/g' at.txt
+whoami
+pwd
+cd ../lorem
+ls -a *.txt
+cat sed.txt | wc -l
+ls -a lorem* | wc -l
+grep -o -i et at.txt | wc -l
+grep -c "et" at.txt
+cd ../
+grep -r et lorem-copy | wc -l
+cd ../
+nano list_files.sh
+bash list_files.sh
+In the nano file I wrote:
+	name=Carmen
+	echo My name is $Carmen
+In the terminal I typed:
+	bash list_files.sh
