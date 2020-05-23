@@ -11,50 +11,75 @@ select a.au_id AUTHOR_ID, a.au_lname as LAST_NAME, a.au_fname as FIRST_NAME, t.t
 from authors a left join titleauthor ta on a.au_id = ta.au_id
 inner join titles t on ta.title_id = t.title_id
 left join publishers p on t.pub_id = p.pub_id
-order by t.title_id
+order by t.title_id;
 
 -- Testing it's OK. Result 1 must be equal to Result 2
 --Result 1
 select count(a.au_id)
 from authors a left join titleauthor ta on a.au_id = ta.au_id
 inner join titles t on ta.title_id = t.title_id
-left join publishers p on t.pub_id = p.pub_id
+left join publishers p on t.pub_id = p.pub_id;
 --Result 2
 SELECT count(au_id)
-from titleauthor ta
+from titleauthor ta;
 
 
 
 
 
-If your query is correct, the total rows in your output should be the same as the total number of records in Table `titleauthor`.
+--If your query is correct, the total rows in your output should be the same as the total number of records in Table `titleauthor`.
+--## Challenge 2 - Who Have Published How Many At Where?
+--Elevating from your solution in Challenge 1, query how many titles each author has published at each publisher. Your output should look something like below:
 
-## Challenge 2 - Who Have Published How Many At Where?
+--Second exercise
+--select author_id, last_name, first_name, publisher, title_count
+select a.au_id as AUTHOR_ID, a.au_lname as LAST_NAME, a.au_fname as FIRST_NAME, p.pub_name as PUBLISHER, count(t.title) as TITLE_COUNT
+from authors a left join titleauthor ta on a.au_id = ta.au_id
+inner join titles t on ta.title_id = t.title_id
+left join publishers p on t.pub_id = p.pub_id
+group by AUTHOR_ID, LAST_NAME, FIRST_NAME, PUBLISHER
+order by AUTHOR_ID DESC, TITLE_COUNT asc
 
-Elevating from your solution in Challenge 1, query how many titles each author has published at each publisher. Your output should look something like below:
+-- Prueba del 2
+select sum(Titles_num) 
+from (
+select a.au_id as AUTHOR_ID, a.au_lname as LAST_NAME, a.au_fname as FIRST_NAME, p.pub_name as PUBLISHER, count(t.title) as Titles_num
+from authors a left join titleauthor ta on a.au_id = ta.au_id
+inner join titles t on ta.title_id = t.title_id
+left join publishers p on t.pub_id = p.pub_id
+group by AUTHOR_ID, LAST_NAME, FIRST_NAME, PUBLISHER)
 
-![Challenge 2 output](./images/challenge-2.png)
 
-*Note: the screenshot above is not the complete output.*
+--## Challenge 3 - Best Selling Authors
+--Who are the top 3 authors who have sold the highest number of titles? Write a query to find out.
+--Requirements:
 
-To check if your output is correct, sum up the `TITLE COUNT` column. The sum number should be the same as the total number of records in Table `titleauthor`.
+select a.au_id AUTHOR_ID, a.au_lname as LAST_NAME, a.au_fname as FIRST_NAME, t.title, sum(s.qty) as TOTAL
+from authors a left join titleauthor ta on a.au_id = ta.au_id
+inner join titles t on ta.title_id = t.title_id
+left join sales s on t.title_id = s.title_id
+group by AUTHOR_ID
+order by TOTAL DESC
 
-*Hint: In order to count the number of titles published by an author, you need to use [MySQL COUNT](https://dev.mysql.com/doc/refman/8.0/en/counting-rows.html). Also check out [MySQL Group By](https://dev.mysql.com/doc/refman/8.0/en/group-by-modifiers.html) because you will count the rows of different groups of data. Refer to the references and learn by yourself. These features will be formally discussed in the Temp Tables and Subqueries lesson.*
+--* Your output should have the following columns:
+--	* `AUTHOR ID` - the ID of the author
+--	* `LAST NAME` - author last name
+--	* `FIRST NAME` - author first name
+--	* `TOTAL` - total number of titles sold from this author
+--* Your output should be ordered based on `TOTAL` from high to low.
+--* Only output the top 3 best selling authors.
 
-## Challenge 3 - Best Selling Authors
+--## Challenge 4 - Best Selling Authors Ranking
 
-Who are the top 3 authors who have sold the highest number of titles? Write a query to find out.
+--Now modify your solution in Challenge 3 so that the output will display all 23 authors instead of the top 3. Note that the authors who have sold 0 titles should also appear in your output (ideally display `0` instead of `NULL` as the `TOTAL`). Also order your results based on `TOTAL` from high to low.
 
-Requirements:
+-- Exercise 4
 
-* Your output should have the following columns:
-	* `AUTHOR ID` - the ID of the author
-	* `LAST NAME` - author last name
-	* `FIRST NAME` - author first name
-	* `TOTAL` - total number of titles sold from this author
-* Your output should be ordered based on `TOTAL` from high to low.
-* Only output the top 3 best selling authors.
+select a.au_id AUTHOR_ID, a.au_lname as LAST_NAME, a.au_fname as FIRST_NAME, t.title, CASE WHEN sum(s.qty) IS NULL THEN 0 ELSE sum(s.qty) END as TOTAL
+from authors a left join titleauthor ta on a.au_id = ta.au_id
+left join titles t on ta.title_id = t.title_id
+left join sales s on t.title_id = s.title_id
+group by AUTHOR_ID
+order by TOTAL DESC
 
-## Challenge 4 - Best Selling Authors Ranking
 
-Now modify your solution in Challenge 3 so that the output will display all 23 authors instead of the top 3. Note that the authors who have sold 0 titles should also appear in your output (ideally display `0` instead of `NULL` as the `TOTAL`). Also order your results based on `TOTAL` from high to low.
