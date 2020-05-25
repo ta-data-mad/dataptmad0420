@@ -32,12 +32,12 @@ SELECT
 authors.au_id as AUTHOR_ID,
 authors.au_lname  as LAST_NAME,
 authors.au_fname as FIRST_NAME,
-sales.qty as TOTAL
+sum(sales.qty) as TOTAL
 FROM authors
 LEFT JOIN titleauthor on authors.au_id = titleauthor.au_id 
 LEFT JOIN titles on titleauthor.title_id = titles.title_id 
 LEFT JOIN sales on titleauthor.title_id = sales.title_id 
-GROUP BY AUTHOR_ID, TITLE
+GROUP BY AUTHOR_ID
 ORDER BY TOTAL DESC
 LIMIT 3;
 
@@ -47,12 +47,12 @@ SELECT
 authors.au_id as AUTHOR_ID,
 authors.au_lname  as LAST_NAME,
 authors.au_fname as FIRST_NAME,
-COALESCE((sales.qty),case when sales.qty ISNULL THEN 0 END) as TOTAL
+COALESCE(sum(sales.qty),case when sales.qty ISNULL THEN 0 END) as TOTAL
 FROM authors
 LEFT JOIN titleauthor on authors.au_id = titleauthor.au_id 
 LEFT JOIN titles on titleauthor.title_id = titles.title_id 
 LEFT JOIN sales on titleauthor.title_id = sales.title_id 
-GROUP BY AUTHOR_ID, TITLE
+GROUP BY AUTHOR_ID
 ORDER BY TOTAL DESC
-;
+;￼
 
