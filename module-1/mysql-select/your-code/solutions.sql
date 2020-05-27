@@ -47,6 +47,7 @@ order by 4 DESC
 limit 3
 
 ------- CHALLENGE 4 -------
+
 SELECT 
 authors.au_id as "AUTHOR ID",
 authors.au_lname as "LAST NAME",
@@ -59,3 +60,4 @@ join sales
 on sales.title_id = titleauthor.title_id
 group BY titleauthor.au_id
 order BY total DESC;
+
