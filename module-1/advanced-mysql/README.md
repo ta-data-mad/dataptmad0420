@@ -4,6 +4,8 @@
 
 ## Introduction
 
+
+
 In this lab you will practice MySQL Subqueries, Temp Tables, and Action Queries. **You will use the `publications` database**. You can find it in Ironhack's database.
 
 Create a `solutions.sql` file in the `your-code` directory to record your solutions to all challenges.
