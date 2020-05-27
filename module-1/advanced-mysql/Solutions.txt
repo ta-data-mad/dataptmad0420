@@ -1,0 +1,20 @@
+
+with titles_advances as
+(SELECT 
+authors.au_fname,
+authors.au_lname,
+authors.au_id,
+titles.title_id,  
+titles.advance * titleauthor.royaltyper /100 as advance,
+titles.price * sales.qty * titles.royalty /100 as sales_royalty
+from authors 
+left join titleauthor on authors.au_id = titleauthor.au_id 
+left join titles on titleauthor.title_id = titles.title_id 
+left join sales on titles.title_id =sales.title_id)
+select
+authors.au_id,
+sum(sales_royalty) as profit
+from authors
+where sales_royalty in (titles_advances)
+order by profit desc
+limit 3;
