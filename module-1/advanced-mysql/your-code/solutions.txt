@@ -1,0 +1,77 @@
+-- Challenge 1 - Most Profiting Authors with derivied tables
+WITH royalty_advance as ( 
+select
+t.title_id,
+ta.au_id as author_id,
+t.advance * ta.royaltyper / 100 as advance,
+t.price * s.qty * t.royalty /100 * ta.royaltyper / 100 as sales_royalty
+from titleauthor ta
+left join titles t on ta.title_id = t.title_id 
+left join sales s on ta.title_id = s.title_id),
+total_royalties as (
+select ra.title_id,
+ra.author_id,
+ra.advance,
+sum(ra.sales_royalty) as total_royalty
+from royalty_advance ra
+group by ra.author_id, ra.title_id)
+select tr.author_id,
+sum(tr.total_royalty + tr.advance) as profits
+from total_royalties tr
+group by tr.author_id
+order by profits desc
+limit 3;
+
+
+-- Challenge 2 - Alternative Solution: create temporary table
+
+create temporary table if not exists royalty_advance as
+select
+t.title_id,
+ta.au_id as author_id,
+t.advance * ta.royaltyper / 100 as advance,
+t.price * s.qty * t.royalty /100 * ta.royaltyper / 100 as sales_royalty
+from titleauthor ta
+left join titles t on ta.title_id = t.title_id 
+left join sales s on ta.title_id = s.title_id;
+
+create temporary table if not exists total_royalties as
+select ra.title_id,
+ra.author_id,
+ra.advance,
+sum(ra.sales_royalty) as total_royalty
+from royalty_advance ra
+group by ra.author_id, ra.title_id;
+
+select tr.author_id,
+sum(tr.total_royalty + tr.advance) as profits
+from total_royalties tr
+group by tr.author_id
+order by profits desc
+limit 3;
+
+-- Challenge 3 - Create Permanent Table called "most_profiting_authors"
+create table if not exists most_profiting_authors as
+WITH royalty_advance as ( 
+select
+t.title_id,
+ta.au_id as author_id,
+t.advance * ta.royaltyper / 100 as advance,
+t.price * s.qty * t.royalty /100 * ta.royaltyper / 100 as sales_royalty
+from titleauthor ta
+left join titles t on ta.title_id = t.title_id 
+left join sales s on ta.title_id = s.title_id),
+total_royalties as (
+select ra.title_id,
+ra.author_id,
+ra.advance,
+sum(ra.sales_royalty) as total_royalty
+from royalty_advance ra
+group by ra.author_id, ra.title_id)
+select tr.author_id,
+sum(tr.total_royalty + tr.advance) as profits
+from total_royalties tr
+group by tr.author_id
+order by profits desc;
+
+select * from most_profiting_authors limit 3;
