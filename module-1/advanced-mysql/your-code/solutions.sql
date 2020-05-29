@@ -35,7 +35,7 @@ Title_ID,
 Author_ID,
 sum(sales_royalty) as aggregated_royalties_per_title_author
 from sales_royalty 
-GROUP BY Author_ID;
+GROUP BY Author_ID, Title_ID;
 
 
 Step3: Calculate the total profits of each author
@@ -50,7 +50,7 @@ from titles
 join titleauthor on titleauthor.title_id = titles.title_id
 join authors on authors.au_id = titleauthor.au_id
 join sales on sales.title_id = titles.title_id
-ORDER BY author_ID DESC 
+ORDER BY author_ID, Title_ID DESC 
 ), royalty_per_title_author as (
 SELECT
 Title_ID,
@@ -58,7 +58,7 @@ Author_ID,
 advance,
 sum(sales_royalty) as aggregated_royalties_per_title_author
 from sales_royalty 
-GROUP BY Author_ID
+GROUP BY Author_ID, Title_ID
 )
 select
 Author_ID,
@@ -89,7 +89,7 @@ Author_ID,
 advance,
 sum(sales_royalty) as aggregated_royalties_per_title_author
 from sales_royalty 
-GROUP BY Author_ID;
+GROUP BY Author_ID, Title_ID;
 
 select
 Author_ID,
@@ -120,7 +120,7 @@ Author_ID,
 advance,
 sum(sales_royalty) as aggregated_royalties_per_title_author
 from sales_royalty 
-GROUP BY Author_ID
+GROUP BY Author_ID, Title_ID
 )
 select
 Author_ID,
