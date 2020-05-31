@@ -1,20 +1,56 @@
+Challenge 1
 
-with titles_advances as
-(SELECT 
-authors.au_fname,
-authors.au_lname,
-authors.au_id,
-titles.title_id,  
-titles.advance * titleauthor.royaltyper /100 as advance,
-titles.price * sales.qty * titles.royalty /100 as sales_royalty
-from authors 
-left join titleauthor on authors.au_id = titleauthor.au_id 
-left join titles on titleauthor.title_id = titles.title_id 
-left join sales on titles.title_id =sales.title_id)
+Step 1
 select
-authors.au_id,
-sum(sales_royalty) as profit
+authors.au_id as a,
+titles.title_id as t,
+titles.advance * titleauthor.royaltyper /100 as advance,
+titles.price * sales.qty * titles.royalty /100 * titleauthor.royaltyper/100 as sales_royalty
 from authors
-where sales_royalty in (titles_advances)
-order by profit desc
+left join titleauthor on authors.au_id = titleauthor.au_id
+left join titles on titleauthor.title_id = titles.title_id
+left join sales on titles.title_id=sales.title_id;
+
+
+Step 2
+with step_2 as 
+(select
+authors.au_id as a,
+titles.title_id as t,
+titles.advance * titleauthor.royaltyper /100 as advance,
+titles.price * sales.qty * titles.royalty /100 * titleauthor.royaltyper/100 as sales_royalty
+from authors
+left join titleauthor on authors.au_id = titleauthor.au_id
+left join titles on titleauthor.title_id = titles.title_id
+left join sales on titles.title_id=sales.title_id) 
+select a,t, sum(sales_royalty)
+from step_2
+group by a, t;
+
+Step 3
+with step_3 as
+(with step_2 as 
+(select
+titles.title_id as t,
+authors.au_id as a,
+titles.advance * titleauthor.royaltyper /100 as advance,
+titles.price * sales.qty * titles.royalty /100 * titleauthor.royaltyper/100 as sales_royalty
+from authors
+left join titleauthor on authors.au_id = titleauthor.au_id
+left join titles on titleauthor.title_id = titles.title_id
+left join sales on titles.title_id=sales.title_id) 
+select a,
+t, 
+sum(sales_royalty) as royalties, 
+advance
+from step_2
+group by t, a)
+select 
+a, 
+t,
+royalties + advance as profits
+from step_3
+order by profits desc
 limit 3;
+
+
