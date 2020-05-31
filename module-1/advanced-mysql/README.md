@@ -7,7 +7,7 @@
 In this lab you will practice MySQL Subqueries, Temp Tables, and Action Queries. **You will use the `publications` database**. You can find it in Ironhack's database.
 
 Create a `solutions.sql` file in the `your-code` directory to record your solutions to all challenges.
-
+ 
 ## Challenge 1 - Most Profiting Authors
 
 In this challenge you'll find out **who are the top 3 most profiting authors** in the `publications` database? Step-by-step guidances to train your problem-solving thinking will help you get through this lab.
