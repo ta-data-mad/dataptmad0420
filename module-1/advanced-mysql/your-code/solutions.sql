@@ -59,4 +59,27 @@ limit 3
 
 CHALLENGE 3
 
-
+create table if not exists most_profiting_authors as
+select
+Author_ID,
+profits
+from (
+select
+Author_ID,
+(advance + sales_royalty) as profits
+from (
+select 
+titles.title_id as Title_ID,
+titleauthor.au_id as Author_ID,
+sales.ord_num,
+(titleauthor.royaltyper * titles.advance / 100) as advance,
+(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) as sales_royalty
+from titles
+join sales
+on sales.title_id = titles.title_id
+join titleauthor 
+on titleauthor.title_id = sales.title_id
+)
+group by Title_ID, Author_ID
+)
+order by profits desc
