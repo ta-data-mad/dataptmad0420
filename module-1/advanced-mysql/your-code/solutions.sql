@@ -70,3 +70,42 @@ limit 3;
 -- consult the result in the temporary tables:
 SELECT * FROM consult_challenge_2
 
+
+
+--challenge 3:
+--create a permanent table with the information:
+create table if not exists most_profiting_authors as
+WITH sales_royalty as 
+(select 
+titles.title_id as title_ID,
+authors.au_id as Author_ID,
+titles.advance * titleauthor.royaltyper / 100 as Advance,
+titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100 as Sales_royalty
+from titles 
+left join titleauthor 
+on titleauthor.title_id = titles.title_id 
+left join sales 
+on sales.title_id =titles.title_id
+left join authors 
+on authors.au_id =titleauthor.au_id
+),
+royalty_for_title_and_author_table as 
+(select 
+title_ID,
+Author_ID,
+Advance,
+sum(Sales_royalty) as Aggregated_royalties
+from sales_royalty
+group by title_ID, Author_ID
+)
+select 
+Author_ID,
+sum(Advance + Aggregated_royalties) as profits
+from royalty_for_title_and_author_table
+group by Author_ID
+order by profits desc
+LIMIT 3; --we assume that we want to continue knowing only the 3 most profiting authors 
+-- if we want to have all the authors, we would remove the "LIMIT 3".
+
+--consult the result in the new permanent table:
+select * from most_profiting_authors
