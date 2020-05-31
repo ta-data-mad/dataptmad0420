@@ -1,0 +1,18 @@
+solution of Additional challenge in codewars:
+
+def insert_dash(num):
+    dashed = ''
+    num = str(num)
+    lastNum = num[len(num)-1]
+     
+    for position in range(len(num)-1):
+        digit = int(num[position])
+        nextDigit = int(num[position+1])
+         
+        if digit % 2 != 0 and nextDigit % 2 != 0:
+            dashed = dashed + str(digit) + '-'
+        else:
+            dashed = dashed + str(digit)
+             
+             
+    return dashed + lastNum
