@@ -116,3 +116,5 @@ CREATE TABLE most_profiting_authors AS
 	GROUP BY "Author ID"
 	ORDER BY "Total_profit" DESC
 	LIMIT 3;
+	
+	Final
