@@ -1,5 +1,5 @@
-#Challenge 1 - Most Profiting Authors
-#Step 1: Calculate the royalty of each sale for each author and the advance for each author and publication
+/*Challenge 1 - Most Profiting Authors*/
+/*Step 1: Calculate the royalty of each sale for each author and the advance for each author and publication*/
 
 SELECT  
 titleauthor.au_id AS "author_ID",
@@ -12,7 +12,7 @@ ON titles.title_id = titleauthor.title_id
 JOIN sales
 ON sales.title_id = titles.title_id;
 
-#Step 2: Aggregate the total royalties for each title and author
+/*Step 2: Aggregate the total royalties for each title and author*/
 SELECT author_ID, title_ID, SUM(advance), SUM(royalty)
 FROM (
 SELECT  
@@ -27,7 +27,7 @@ JOIN sales
 ON sales.title_id = titles.title_id
 ) GROUP BY author_ID, title_ID ;
 
-#Step 3: Calculate the total profits of each author
+/*Step 3: Calculate the total profits of each author*/
 SELECT author_ID, SUM(total_advance + total_royalty) AS "total_profit"
 FROM 
 (SELECT author_ID, 
@@ -52,7 +52,7 @@ ORDER BY total_profit DESC
 LIMIT 3
 
 
-#Challenge 2 - Alternative Solution
+/*Challenge 2 - Alternative Solution*/
 CREATE TEMPORARY TABLE all_advance_royalties AS
 SELECT  
 titleauthor.au_id AS "author_ID",
@@ -87,5 +87,7 @@ LIMIT 3
 
 SELECT * FROM most_profitable_authors_3
 
-
+/*Challenge 3 - create a permanent table named most_profiting_authors*/
+CREATE TABLE most_profiting_authors AS
+SELECT * FROM most_profitable_authors_3
 
