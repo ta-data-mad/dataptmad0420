@@ -1,0 +1,48 @@
+######### CHALLENGE 1:
+
+SELECT Author_ID, (Advance + Agg_Ryt) AS Total_Profits_Per_Title
+
+FROM (	
+	/*subquery step_2: All col from step_1 + summatory*/
+	SELECT Title_ID, Author_ID, Advance, Royalties,
+		SUM(Royalties) AS Agg_Ryt /*Aggregated Royalties*/
+		
+	FROM (
+		/*subquery step_1: From initial col -> output the advance and royalty*/
+		SELECT Title_ID, Author_ID, 
+			ROUND((Adv*Rt)/100, 2) AS Advance, 
+			ROUND(((Price*Qty*tRt*Rt)/(100*100)), 3) AS Royalties
+							
+		FROM (
+			/*Initial JOINS and COl selections*/
+			SELECT 
+				t.title_id AS Title_ID, 
+				ta.au_id AS Author_ID, 
+				t.advance AS Adv, 
+				ta.royaltyper AS Rt, 
+				t.price AS Price, 
+				s.qty AS Qty, 
+				t.royalty AS tRt
+			FROM titles t
+			
+			/*joins every title with an author, even if sales are NULL*/
+			JOIN titleauthor ta 
+			ON ta.title_id = t.title_id
+			
+			LEFT JOIN sales s 
+			ON s.title_id = t.title_id
+			
+			) step_1
+			
+		) step_2 /*Len step_2 == Len titleauthor / if each title should apperar only once for each author*/
+		
+	GROUP BY Title_ID, Author_ID
+	
+	) step_3
+	
+GROUP BY Author_ID
+ORDER BY (Advance + Agg_Ryt) DESC
+LIMIT 3;
+
+
+######### CHALLENGE 2:
