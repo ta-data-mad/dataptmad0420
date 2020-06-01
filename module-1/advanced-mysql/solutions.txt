@@ -45,4 +45,65 @@ ORDER BY (Advance + Agg_Ryt) DESC
 LIMIT 3;
 
 
+
 ######### CHALLENGE 2:
+
+/*RUN IF NECESSARY*/
+DROP TABLE IF EXISTS challenge_2_step_1;
+DROP TABLE IF EXISTS challenge_2_step_2;
+DROP TABLE IF EXISTS challenge_2_step_3;
+DROP TABLE IF EXISTS challenge_2_step_4;
+
+/*Initial JOINS and COl selections*/
+CREATE TEMPORARY TABLE challenge_2_step_1 AS 
+SELECT 
+	t.title_id AS Title_ID, 
+	ta.au_id AS Author_ID, 
+	t.advance AS Adv, 
+	ta.royaltyper AS Rt, 
+	t.price AS Price, 
+	s.qty AS Qty, 
+	t.royalty AS tRt
+
+FROM titles t
+
+/*joins every title with an author, even if sales are NULL*/
+JOIN titleauthor ta 
+ON ta.title_id = t.title_id
+
+LEFT JOIN sales s 
+ON s.title_id = t.title_id;
+
+/*STEP 1*/
+CREATE TEMPORARY TABLE challenge_2_step_2 AS
+SELECT 
+	Title_ID, Author_ID,
+	ROUND((Adv*Rt)/100, 2) AS Advance, 
+	ROUND(((Price*Qty*tRt*Rt)/(100*100)), 3) AS Royalties
+		
+FROM challenge_2_step_1;
+
+/*STEP 2*/
+CREATE TEMPORARY TABLE challenge_2_step_3 AS
+SELECT 
+	Title_ID, Author_ID, 
+	Advance, Royalties,
+	SUM(Royalties) AS Agg_Ryt /*Aggregated Royalties*/
+
+FROM challenge_2_step_2
+GROUP BY Title_ID, Author_ID;
+
+/*STEP 3*/
+CREATE TEMPORARY TABLE challenge_2_step_4 AS
+SELECT 
+	Author_ID, 
+	(Advance + Agg_Ryt) AS Total_Profits_Per_Title
+
+FROM challenge_2_step_3
+
+GROUP BY Author_ID
+ORDER BY (Advance + Agg_Ryt) DESC
+LIMIT 3;
+
+/*FINAL STEP*/
+SELECT * FROM challenge_2_step_4;
