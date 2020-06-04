@@ -79,3 +79,14 @@ from step2
 group by a
 order by profits desc
 limit 3;
+
+Challenge 3
+create table most_profiting_authors as 
+select a, sum(royalties)+sum(advance) as profits
+from step2
+group by a
+order by profits desc
+limit 3;
+
+
+
