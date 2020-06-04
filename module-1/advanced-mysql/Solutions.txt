@@ -4,6 +4,7 @@ Step 1
 select
 authors.au_id as a,
 titles.title_id as t,
+sales.ord_num,
 titles.advance * titleauthor.royaltyper /100 as advance,
 titles.price * sales.qty * titles.royalty /100 * titleauthor.royaltyper/100 as sales_royalty
 from authors
@@ -23,7 +24,7 @@ from authors
 left join titleauthor on authors.au_id = titleauthor.au_id
 left join titles on titleauthor.title_id = titles.title_id
 left join sales on titles.title_id=sales.title_id) 
-select a,t, sum(sales_royalty)
+select a,t, sum(sales_royalty) as royalties
 from step_2
 group by a, t;
 
@@ -31,26 +32,50 @@ Step 3
 with step_3 as
 (with step_2 as 
 (select
-titles.title_id as t,
 authors.au_id as a,
+titles.title_id as t,
 titles.advance * titleauthor.royaltyper /100 as advance,
 titles.price * sales.qty * titles.royalty /100 * titleauthor.royaltyper/100 as sales_royalty
 from authors
 left join titleauthor on authors.au_id = titleauthor.au_id
 left join titles on titleauthor.title_id = titles.title_id
 left join sales on titles.title_id=sales.title_id) 
-select a,
-t, 
-sum(sales_royalty) as royalties, 
-advance
+select a,t, sum(sales_royalty) as royalties, sum(distinct advance) as advance
 from step_2
-group by t, a)
-select 
-a, 
-t,
-royalties + advance as profits
+group by a)
+select a,
+sum(royalties)+sum(advance) as profits
 from step_3
+group by a
 order by profits desc
 limit 3;
 
+Challenge 2 - Alternative Solution
 
+Step 1
+create temporary table if not exists step1 as
+select
+authors.au_id as a,
+titles.title_id as t,
+sales.ord_num,
+titles.advance * titleauthor.royaltyper /100 as advance,
+titles.price * sales.qty * titles.royalty /100 * titleauthor.royaltyper/100 as sales_royalty
+from authors
+left join titleauthor on authors.au_id = titleauthor.au_id
+left join titles on titleauthor.title_id = titles.title_id
+left join sales on titles.title_id=sales.title_id;
+
+
+Step 2 
+create temporary table step2 as
+select a,t, sum(sales_royalty) as royalties, sum(distinct advance) as advance
+from step1
+group by a, t;
+
+Step 3
+create temporary table step3 as 
+select a,sum(royalties)+sum(advance) as profits
+from step2
+group by a
+order by profits desc
+limit 3;
