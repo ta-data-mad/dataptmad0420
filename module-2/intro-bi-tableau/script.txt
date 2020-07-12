@@ -1,0 +1,5 @@
+Intro-bi-tableau lab
+
+workbook into Tableau public:
+
+https://public.tableau.com/profile/christian.javier#!/vizhome/intro-bi-tableau_15945853831780/newworksheet
