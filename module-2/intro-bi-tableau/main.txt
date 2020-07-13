@@ -1,5 +1,7 @@
 Sergio Figueroa, data pt Madrid 2020
 
-Lab Introduction to BI and Tableau
+Lab Introduction to BI and Tableau.
 
-Find the lab results at 
+Browse the link to check the results:
+ 
+https://public.tableau.com/profile/sergio.figue#!/vizhome/LabTableau_15945744788310/AvWSbyM
