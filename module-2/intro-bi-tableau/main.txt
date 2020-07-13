@@ -1,2 +1,13 @@
+
+#This is the second one, in which I hace calculated the quarters according to my own criteria
+
 https://public.tableau.com/profile/david.gozalo#!/vizhome/liquor_store_sales_Lab_Two/Story1
+
+
+
+#This is the first one, in which I have just followed the Lab instructions
+
 https://public.tableau.com/profile/david.gozalo#!/vizhome/liquor_store_sales_Lab/Story1
+
+
+# As you can see, I don't miss a chance to write a little of comment. 
