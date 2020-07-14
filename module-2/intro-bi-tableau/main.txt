@@ -1,0 +1,4 @@
+Url to my Tableau public;
+
+
+https://public.tableau.com/profile/emmanuel.adonis.lafuente.ramos#!/vizhome/MODULE-2Liquorsheet/AverageWarehouseSalesbyyearandtype?publish=yes
