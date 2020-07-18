@@ -1,0 +1,3 @@
+--Tableu public link:
+
+https://public.tableau.com/profile/juan.mu.oz1530#!/vizhome/intro-bi-tableaudashboard/TotalsbyYearQuarter?publish=yes
