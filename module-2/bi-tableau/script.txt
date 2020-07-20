@@ -1,2 +1,4 @@
 The following link is based on the lab bi-tableau on tableau public:
 
+https://www.public.tableau.com/profile/christian.javier#!/vizhome/bi-tableau/ChurnStory
+
