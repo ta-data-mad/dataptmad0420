@@ -1,0 +1,3 @@
+Tableau public url:
+
+https://public.tableau.com/profile/emmanuel.adonis.lafuente.ramos#!/vizhome/lab-bi-tableau-module-2/Hoja1
