@@ -1,0 +1,11 @@
+tar -zvf lorem.tar.gz lorem-copy.tar.gz /Desktop/dataptmad0420/extra-work/m1/lab-bash-master$ = to compress both files into exercises
+tar -xzvf lorem.tar.gz 
+tar -xzvf lorem-copy.tar.gz = both these commands extract the archives
+create ans alias permanently:
+
+nano ~/.bashrc = to open a file in bash
+alias = ..= "cd .."
+alias = ll= "ls -alh"
+alias = ls -a="la"
+
+after saving the file close terminal an open a new one
